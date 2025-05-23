@@ -1,12 +1,11 @@
 
-import { MobileDevelopment } from '@/components/mobiledevelopement'
+import { ServiceComponent } from '@/components/services'
 import React from 'react'
 
 const Service = () => {
   return (
     <div>
-      <MobileDevelopment />
-          
+     <ServiceComponent />
     </div>
   )
 }

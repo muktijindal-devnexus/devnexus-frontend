@@ -1,12 +1,12 @@
 import React from 'react'
 import { MobileBanner } from './MobileBanner'
-import FaqSection from '../digitalmarketing/FaqSection'
+import FaqSection from '../global/FaqSection'
 
-import WhyChooseUs from './WhyChooseUs'
+import WhyChooseUs from '../common/WhyChooseUs'
 import Slider from '../digitalmarketing/Slider'
-import ExecutionSection from './ExecutionSection'
+import ExecutionSection from '../common/ExecutionSection'
 import { MobileAppProcess } from './MobileAppProcess'
-import StatusCard from '../global/Status'
+import StatusCard from '../common/Status'
 
 
 export const MobileDevelopment = () => {

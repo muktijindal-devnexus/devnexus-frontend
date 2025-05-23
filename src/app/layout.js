@@ -2,8 +2,7 @@ import { Geist, Geist_Mono, Montserrat } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/global/Navbar";
 import Footer from "@/components/global/Footer";
-import { ContactForm } from "@/components/landingpage/ContactForm";
-
+import { ContactForm } from "@/components/global/ContactForm";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,10 +17,8 @@ const geistMono = Geist_Mono({
 const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
-  weight: ['400', '700'],  // you can specify font weights you want
+  weight: ["400", "700"], // you can specify font weights you want
 });
-
-
 
 export const metadata = {
   title: "DevNexus",
@@ -37,7 +34,6 @@ export default function RootLayout({ children }) {
         <Navbar />
         {children}
         <ContactForm />
-        
         <Footer />
       </body>
     </html>

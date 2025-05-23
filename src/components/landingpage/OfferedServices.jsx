@@ -1,0 +1,62 @@
+import Image from "next/image";
+import React from "react";
+import DigitalMarketing from "../../../public/images/image 81.png";
+import BannerSheet from "../../../public/images/ServiceBannerSheet.png";
+import { MoveRight } from "lucide-react";
+import Link from "next/link";
+
+const services = [
+  { title: "Digital Marketing", href: "/digitalmarketing" },
+  { title: "Full-Stack Development", href: "/fullstackdevelopment" },
+  { title: "UI/UX Designing", href: "/uiux" },
+  { title: "Mobile Development", href: "/mobiledevelopment" },
+];
+
+export const OfferedServices = () => {
+  return (
+    <section className="px-4 md:px-8 lg:px-16 py-10">
+      <div className="flex flex-col lg:flex-row items-start lg:items-center gap-4 lg:gap-10">
+        <h1 className="font-semibold text-2xl md:text-3xl lg:text-[34px] text-[#335D95] leading-snug">
+          Services Offered by <br />
+          <span className="text-[#00357A] text-[30px] md:text-[36px] lg:text-[40px] font-bold">
+            DevNexus Solutions
+          </span>
+        </h1>
+        <div className="w-full lg:w-[62%] h-[3px] bg-[#00357A] mt-6 lg:mt-14"></div>
+      </div>
+
+      {/* Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1 pt-10 overflow-x-scroll">
+        {services.map((service, index) => (
+          <div
+            key={index}
+            className="relative w-full h-[300px] md:h-[350px]  shadow-md"
+          >
+            <Image
+              src={DigitalMarketing}
+              alt={service.title}
+              fill
+              className="object-cover z-0"
+            />
+            <Image
+              src={BannerSheet}
+              alt="Banner Sheet"
+              fill
+              className="object-cover z-10 absolute"
+            />
+            <div className="absolute inset-0 z-20 flex w-[100px]  text-white text-xl font-semibold p-8 leading-8">
+              <h2 className="text-white text-lg md:text-xl font-semibold leading-8 ">
+                {service.title}
+              </h2>
+            </div>
+            <Link href={service.href} passHref>
+              <div className="bg-white text-blue-950 h-8 py-2 px-6 rounded-xl text-center items-center flex absolute z-50 bottom-10 right-10 cursor-pointer">
+                <MoveRight />
+              </div>
+            </Link>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};

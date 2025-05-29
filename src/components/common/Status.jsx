@@ -8,7 +8,7 @@ const StatusCard = () => {
         {/* Item 1 */}
         <div className="flex flex-col items-center text-center px-4">
           <FaThumbsUp className="text-3xl text-blue-900 mb-2" />
-          <h3 className="text-xl font-bold">98%</h3>
+          <h3 className="text-xl font-bold">96%</h3>
           <p className="text-sm text-gray-500">Satisfaction Rate</p>
         </div>
 
@@ -18,7 +18,7 @@ const StatusCard = () => {
         {/* Item 2 */}
         <div className="flex flex-col items-center text-center px-4">
           <MdBusinessCenter className="text-3xl text-blue-900 mb-2" />
-          <h3 className="text-xl font-bold">2+</h3>
+          <h3 className="text-xl font-bold">10+</h3>
           <p className="text-sm text-gray-500">Years of Business</p>
         </div>
 
@@ -28,7 +28,7 @@ const StatusCard = () => {
         {/* Item 3 */}
         <div className="flex flex-col items-center text-center px-4">
           <FaUsers className="text-3xl text-blue-900 mb-2" />
-          <h3 className="text-xl font-bold">230+</h3>
+          <h3 className="text-xl font-bold">1200+</h3>
           <p className="text-sm text-gray-500">Satisfied Clients</p>
         </div>
       </div>

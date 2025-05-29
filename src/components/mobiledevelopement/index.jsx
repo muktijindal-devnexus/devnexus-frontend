@@ -3,10 +3,10 @@ import { MobileBanner } from './MobileBanner'
 import FaqSection from '../global/FaqSection'
 
 import WhyChooseUs from '../common/WhyChooseUs'
-import Slider from '../digitalmarketing/Slider'
+import Slider from '../common/Slider'
 import ExecutionSection from '../common/ExecutionSection'
-import { MobileAppProcess } from './MobileAppProcess'
 import StatusCard from '../common/Status'
+import { ProcessWeFollow } from '../common/ProcessWeFollow'
 
 
 export const MobileDevelopment = () => {
@@ -17,7 +17,7 @@ export const MobileDevelopment = () => {
        <WhyChooseUs />
        <ExecutionSection />
        <Slider />
-       <MobileAppProcess />
+       <ProcessWeFollow />
        <FaqSection />
     </div>
   )

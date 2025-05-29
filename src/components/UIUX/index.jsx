@@ -4,7 +4,7 @@ import StatusCard from "../common/Status";
 import UIDesignTechnologies from "./Core";
 import { MainDevnexus } from "./MainDevnexus";
 import DesignProcess from "./DesignProcess";
-import Slider from "../digitalmarketing/Slider";
+import Slider from "../common/Slider";
 import { WhyUIUX } from "./WhyUIUX";
 import FaqSection from "../global/FaqSection";
 import BannerImage1 from '../../../public/images/UIUXBanner.png'

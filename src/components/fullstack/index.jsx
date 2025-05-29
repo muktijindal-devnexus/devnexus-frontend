@@ -4,6 +4,9 @@ import StatusCard from '@/components/common/Status'
 import WhyChooseUs from '@/components/common/WhyChooseUs'
 import ExecutionSection from '@/components/common/ExecutionSection'
 import React from 'react'
+import { ProcessWeFollow } from '../common/ProcessWeFollow'
+import BrandSlider from '../global/BrandSlider'
+import FaqSection from '../global/FaqSection'
 
 export const Fullstack = () => {
   return (
@@ -17,6 +20,9 @@ export const Fullstack = () => {
                    <StatusCard />
                       <WhyChooseUs />
                         <ExecutionSection />
+                        <ProcessWeFollow />
+                        <BrandSlider />
+                        <FaqSection />
     </div>
   )
 }

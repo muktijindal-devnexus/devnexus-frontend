@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image";
 import React from "react";
 import DigitalMarketing from "../../../public/images/image 81.png";
@@ -10,6 +11,8 @@ const services = [
   { title: "Full-Stack Development", href: "/fullstackdevelopment" },
   { title: "UI/UX Designing", href: "/uiux" },
   { title: "Mobile Development", href: "/mobiledevelopment" },
+  { title: "Blockchain development", href: "/blockchain" },
+  { title: "AI Technologies", href: "/ai-tech" },
 ];
 
 export const OfferedServices = () => {
@@ -25,12 +28,27 @@ export const OfferedServices = () => {
         <div className="w-full lg:w-[62%] h-[3px] bg-[#00357A] mt-6 lg:mt-14"></div>
       </div>
 
-      {/* Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1 pt-10 overflow-x-scroll">
+      {/* Cards with custom scroll */}
+      <div
+        style={{
+          display: "flex",
+          overflowX: "auto",
+          gap: "1rem",
+          paddingTop: "2.5rem",
+          paddingBottom: "1rem",
+        }}
+        className="custom-scroll"
+      >
         {services.map((service, index) => (
           <div
             key={index}
-            className="relative w-full h-[300px] md:h-[350px]  shadow-md"
+            style={{
+              flexShrink: 0,
+              width: "300px",
+              height: "350px",
+              boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+              position: "relative",
+            }}
           >
             <Image
               src={DigitalMarketing}
@@ -44,8 +62,8 @@ export const OfferedServices = () => {
               fill
               className="object-cover z-10 absolute"
             />
-            <div className="absolute inset-0 z-20 flex w-[100px]  text-white text-xl font-semibold p-8 leading-8">
-              <h2 className="text-white text-lg md:text-xl font-semibold leading-8 ">
+            <div className="absolute inset-0 z-20 flex w-[100px] text-white text-xl font-semibold p-8 leading-8">
+              <h2 className="text-white text-lg md:text-xl font-semibold leading-8">
                 {service.title}
               </h2>
             </div>
@@ -57,6 +75,20 @@ export const OfferedServices = () => {
           </div>
         ))}
       </div>
+
+      {/* Embedded scrollbar styles */}
+      <style jsx>{`
+        .custom-scroll::-webkit-scrollbar {
+          height: 10px;
+        }
+        .custom-scroll::-webkit-scrollbar-thumb {
+          background-color: #00357a;
+          border-radius: 10px;
+        }
+        .custom-scroll::-webkit-scrollbar-track {
+          background-color: #e5e7eb;
+        }
+      `}</style>
     </section>
   );
 };

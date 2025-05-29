@@ -1,47 +1,58 @@
-import Image from "next/image";
-import React from "react";
+'use client';
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { FaBars, FaTimes } from 'react-icons/fa';
 import Logo from "../../../public/images/logo.svg";
-import Link from "next/link";
 
 export const Navbar = () => {
+    const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
   return (
-    <div className="bg-[#3E3E3E] h-[60px] select-none fixed top-0 left-0 w-full z-50
-">
-      <div className="flex justify-between items-center text-center h-full px-6">
-        <div className="flex items-center space-x-4">
-          <Image src={Logo} width={48} height={68} alt="LogoImage" />
-          <h1 className="text-white text-lg font-semibold">
-            DevNexus Solutions
-          </h1>
+     <header className="bg-[#333] text-white">
+      <div className="max-w-screen-xl mx-auto flex items-center justify-between px-4 py-3 md:py-4">
+        {/* Logo */}
+        <div className="flex items-center gap-2">
+          <img src="/images/logo.svg" alt="Logo" className="h-8 w-auto" />
+          <div>
+            <h1 className="text-sm font-bold">DevNexus Solutions</h1>
+            <p className="text-xs text-gray-300">INNOVATE • BUILD • GROW</p>
+          </div>
         </div>
 
-        <nav className="hidden md:flex md:items-center space-x-8">
-          <Link href="/" className="text-white hover:text-gray-300 transition">
-            Home
+        {/* Desktop Menu */}
+        <nav className="hidden md:flex items-center gap-8">
+          {['Home', 'About', 'Services', 'Portfolio', 'Career', 'Blogs'].map((item, i) => (
+            <Link key={i} href={`/${item.toLowerCase()}`} className="hover:text-blue-400">
+              {item}
+            </Link>
+          ))}
+          <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white text-sm px-4 py-2 rounded-md">
+            Free Consultation
           </Link>
-          <Link
-            href="/about"
-            className="text-white hover:text-gray-300 transition"
-          >
-            About
-          </Link>
-          <Link
-            href="/services"
-            className="text-white hover:text-gray-300 transition"
-          >
-            Services
-          </Link>
-          <Link
-            href="/projects"
-            className="text-white hover:text-gray-300 transition"
-          >
-            Project
-          </Link>
-          <button className=" text-white border-1 px-5 py-1 rounded-sm hover:bg-gray-200 transition">
-            Contact Us
-          </button>
         </nav>
+
+        {/* Mobile Menu Button */}
+        <button onClick={toggleMenu} className="md:hidden text-white text-xl">
+          {menuOpen ? <FaTimes /> : <FaBars />}
+        </button>
       </div>
-    </div>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <nav className="md:hidden bg-[#333] text-white px-4 py-4 space-y-3">
+          {['Home', 'About', 'Services', 'Portfolio', 'Career', 'Blogs'].map((item, i) => (
+            <Link key={i} href={`/${item.toLowerCase()}`} className="block hover:text-blue-400">
+              {item}
+            </Link>
+          ))}
+          <Link href="/contact" className="block bg-blue-600 hover:bg-blue-700 text-white text-sm px-4 py-2 rounded-md">
+            Free Consultation
+          </Link>
+        </nav>
+      )}
+    </header>
   );
 };
+

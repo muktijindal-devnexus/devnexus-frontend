@@ -34,6 +34,7 @@ export const DevNexusMarketingBenefits = () => {
     <section className="px-6 md:px-16 py-12 space-y-10">
       <h2 className="text-2xl md:text-3xl font-light text-center text-[#335D95]">
         What Makes <span className="font-bold text-[#00357A]">DevNexus Solutions</span> Best For{' '}
+        <br />
         <span className="font-bold text-[#00357A]">Digital Marketing Services?</span>
       </h2>
 
@@ -41,24 +42,33 @@ export const DevNexusMarketingBenefits = () => {
         {features.map((feature, idx) => (
           <div
             key={idx}
-            className={`flex gap-4 p-6 rounded-lg shadow-sm ${
-              feature.highlight
-                ? 'bg-[#00357A] text-white'
-                : 'bg-white text-gray-800 border border-gray-200'
-            }`}
+            className={`group flex gap-4 p-6 rounded-lg shadow-sm transition-all duration-300 cursor-pointer
+              ${
+                feature.highlight
+                  ? 'text-[#00357A] hover:bg-[#335D95] hover:text-white'
+                  : 'bg-white text-gray-800 border border-gray-200 hover:bg-[#335D95] hover:text-white'
+              }`}
           >
-            <div className={`text-2xl ${feature.highlight ? 'text-white' : 'text-[#00357A]'}`}>
+            <div
+              className={`text-2xl transition-colors duration-300 ${
+                feature.highlight
+                  ? 'text-[#00357A] group-hover:text-white'
+                  : 'text-[#00357A] group-hover:text-white'
+              }`}
+            >
               {feature.icon}
             </div>
             <div>
               <h3
-                className={`text-lg font-semibold mb-2 ${
-                  feature.highlight ? 'text-white' : 'text-[#00357A]'
+                className={`text-lg font-semibold mb-2 transition-colors duration-300 ${
+                  feature.highlight
+                    ? 'text-[#00357A] group-hover:text-white'
+                    : 'text-[#00357A] group-hover:text-white'
                 }`}
               >
                 {feature.title}
               </h3>
-              <p className="text-sm">{feature.description}</p>
+              <p className="text-sm transition-colors duration-300">{feature.description}</p>
             </div>
           </div>
         ))}

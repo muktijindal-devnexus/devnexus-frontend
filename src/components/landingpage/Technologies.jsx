@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+
+// Icon Imports
 import HtmlIcon from "../../../public/images/html.png";
 import CSSIcon from "../../../public/images/CSS.svg";
 import ReactIcon from "../../../public/images/React.svg";
@@ -21,29 +23,55 @@ const tabs = [
   { label: "Database", icon: DatabaseIcon },
   { label: "UI/UX", icon: UIIcon },
   { label: "CMS", icon: CMSIcon },
+  { label: "Deveops", icon: CMSIcon },
 ];
 
-const frontendTechs = [
-  { name: "HTML 5", icon: HtmlIcon },
-  { name: "CSS 3", icon: CSSIcon },
-  { name: "REACT.JS", icon: ReactIcon },
-  { name: "NEXT.JS", icon: NextIcon },
-  { name: "FLUTTER", icon: FlutterIcon },
-  { name: "TAILWIND", icon: TailwindIcon },
-  { name: "MUI", icon: MUIIcon },
-  { name: "REACT NATIVE", icon: NativeIcon },
-];
+const techData = {
+  Frontend: [
+    { name: "HTML 5", icon: HtmlIcon },
+    { name: "CSS 3", icon: CSSIcon },
+    { name: "REACT.JS", icon: ReactIcon },
+    { name: "NEXT.JS", icon: NextIcon },
+    { name: "FLUTTER", icon: FlutterIcon },
+    { name: "TAILWIND", icon: TailwindIcon },
+    { name: "MUI", icon: MUIIcon },
+    { name: "REACT NATIVE", icon: NativeIcon },
+  ],
+  Backend: [
+    { name: "Node.js", icon: ReactIcon },
+    { name: "Express.js", icon: NextIcon },
+    { name: "Django", icon: TailwindIcon },
+    { name: "Flask", icon: FlutterIcon },
+  ],
+  Database: [
+    { name: "MongoDB", icon: TailwindIcon },
+    { name: "MySQL", icon: HtmlIcon },
+    { name: "PostgreSQL", icon: CSSIcon },
+  ],
+  "UI/UX": [
+    { name: "Figma", icon: UIIcon },
+    { name: "Adobe XD", icon: MUIIcon },
+  ],
+  CMS: [
+    { name: "WordPress", icon: CMSIcon },
+    { name: "Strapi", icon: MUIIcon },
+  ],
+  Deveops: [
+    { name: "Docker", icon: CSSIcon },
+    { name: "Kubernetes", icon: ReactIcon },
+    { name: "GitHub Actions", icon: HtmlIcon },
+  ],
+};
 
 const Technologies = () => {
   const [activeTab, setActiveTab] = useState("Frontend");
 
   return (
-    <section className="bg-white text-center ">
+    <section className="bg-white text-center">
       {/* Title */}
       <div className="flex justify-center items-center mb-6">
         <h1 className="text-4xl text-[#335D95] font-semibold">
-          Technologies <span className="font-bold text-[#00357A]">We Work</span>{" "}
-          with
+          Technologies <span className="font-bold text-[#00357A]">We Work</span> with
         </h1>
       </div>
 
@@ -68,25 +96,20 @@ const Technologies = () => {
 
       {/* Tech Grid */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-        {activeTab === "Frontend" &&
-          frontendTechs.map((tech) => (
-            <div
-              key={tech.name}
-              className="border-1 border-[#00357A] rounded-2xl p-4 flex flex-col items-center justify-center select-none"
-            >
-              {typeof tech.icon === "string" ? (
-                <img src={tech.icon} alt={tech.name} className="h-10 mb-2" />
-              ) : (
-                <Image
-                  src={tech.icon}
-                  alt={tech.name}
-                  className="mb-2"
-                  height={80}
-                />
-              )}
-              <span className="text-sm font-semibold">{tech.name}</span>
-            </div>
-          ))}
+        {techData[activeTab]?.map((tech) => (
+          <div
+            key={tech.name}
+            className="border-1 border-[#00357A] rounded-2xl p-4 flex flex-col items-center justify-center select-none"
+          >
+            <Image
+              src={tech.icon}
+              alt={tech.name}
+              className="mb-2"
+              height={80}
+            />
+            <span className="text-sm font-semibold">{tech.name}</span>
+          </div>
+        ))}
       </div>
     </section>
   );

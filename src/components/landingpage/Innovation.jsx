@@ -17,7 +17,7 @@ const services = [
 
 export default function ServiceGrid() {
   const floatingCorners = [
-    { className: "top-0 left-0", transform: "" },
+    { className: "top-0 left-0", transform: "-scale-y-100" },
     { className: "top-0 right-0", transform: "-scale-x-100" },
     { className: "bottom-0 left-0", transform: "-scale-y-100" },
     { className: "bottom-0 right-0", transform: "-scale-100" },

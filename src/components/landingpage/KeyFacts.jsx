@@ -1,14 +1,24 @@
+'use client';
 import React from "react";
 import Innovation from "../../../public/images/Innovation.png";
 import Image from "next/image";
-import TopArrow from '../../../public/images/KeyFactsArrow.svg'
-import RightTop from '../../../public/images/RightTop.svg'
-import LeftBottom from '../../../public/images/LeftBottom.svg'
-import RightBottom from '../../../public/images/RightBottom.svg'
+import TopArrow from "../../../public/images/KeyFactsArrow.svg";
+import RightTop from "../../../public/images/RightTop.svg";
+import LeftBottom from "../../../public/images/LeftBottom.svg";
+import RightBottom from "../../../public/images/RightBottom.svg";
+import CountUp from "react-countup";
+import { useInView } from "react-intersection-observer";
 
 export const KeyFacts = () => {
+  const { ref, inView } = useInView({
+    threshold: 0.3,
+  });
+
   return (
-    <section className="flex justify-center items-center gap-4 flex-col py-12">
+    <section
+      ref={ref}
+      className="flex justify-center items-center gap-4 flex-col py-12"
+    >
       <div className="flex flex-col text-center w-[70%]">
         <h1 className="text-[34px] leading-[44px] text-[#00357A]">
           Key Facts About Us
@@ -22,17 +32,19 @@ export const KeyFacts = () => {
       <div className="grid grid-cols-1 justify-items-center gap-8 sm:grid-cols-2 lg:grid-cols-3 w-full max-w-6xl px-4 pt-16">
         {/* Column 1 */}
         <div className="space-y-8">
-          {/* Fact 1 */}
           <div className="text-center">
-            <div className="text-4xl font-medium text-[#7E7E7E]">800+</div>
+            <div className="text-4xl font-medium text-[#7E7E7E]">
+              {inView ? <CountUp end={800} duration={3} /> : '0'}+
+            </div>
             <h3 className="mt-2 text-lg font-medium text-[#335D95]">
               Happy Customers
             </h3>
           </div>
 
-          {/* Fact 2 */}
           <div className="text-center">
-            <div className="text-4xl font-medium text-[#7E7E7E]">1500+</div>
+            <div className="text-4xl font-medium text-[#7E7E7E]">
+              {inView ? <CountUp end={1500} duration={2.5} /> : '0'}+
+            </div>
             <h3 className="mt-2 text-lg font-medium text-[#335D95]">
               Projects Done
             </h3>
@@ -41,23 +53,19 @@ export const KeyFacts = () => {
 
         {/* Column 2 - Image with Arrows */}
         <div className="relative flex items-center justify-center">
-          {/* Top Arrow */}
-          <div className="absolute -top-5 -left-[70%] ">
+          <div className="absolute -top-5 -left-[70%]">
             <Image src={TopArrow} alt="Arrow" width={128} height={128} />
           </div>
-
           <div className="absolute top-[50%] -left-[70%]">
-               <Image src={LeftBottom} alt="Arrow" width={128} height={128} />
+            <Image src={LeftBottom} alt="Arrow" width={128} height={128} />
           </div>
-
           <div className="absolute -top-5 -right-[70%]">
-                <Image src={RightTop} alt="Arrow" width={128} height={128} />
+            <Image src={RightTop} alt="Arrow" width={128} height={128} />
+          </div>
+          <div className="absolute top-[50%] -right-[70%]">
+            <Image src={RightBottom} alt="Arrow" width={128} height={128} />
           </div>
 
-          <div className="absolute top-[50%] -right-[70%]">
-                <Image src={RightBottom} alt="Arrow" width={128} height={128} />
-          </div>
-          
           <Image
             src={Innovation}
             alt="Innovation illustration"
@@ -70,17 +78,19 @@ export const KeyFacts = () => {
 
         {/* Column 3 */}
         <div className="space-y-8">
-          {/* Fact 3 */}
           <div className="text-center">
-            <div className="text-4xl font-medium text-[#7E7E7E]">30+</div>
+            <div className="text-4xl font-medium text-[#7E7E7E]">
+              {inView ? <CountUp end={30} duration={5.5} /> : '0'}+
+            </div>
             <h3 className="mt-2 text-lg font-medium text-[#335D95]">
               Employees
             </h3>
           </div>
 
-          {/* Fact 4 */}
           <div className="text-center">
-            <div className="text-4xl font-medium text-[#7E7E7E]">5+</div>
+            <div className="text-4xl font-medium text-[#7E7E7E]">
+              {inView ? <CountUp end={5} duration={6.2} /> : '0'}+
+            </div>
             <h3 className="mt-2 text-lg font-medium text-[#335D95]">
               Years Experience
             </h3>

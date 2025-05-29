@@ -64,12 +64,13 @@ export const SeoMarketing = () => {
       {/* Left Content */}
       <div className="md:w-1/2 space-y-6">
         <h1 className="text-[32px] md:text-[48px] text-[#335D95] leading-tight">
-          Delivering <br />
+         Our {' '}
           <span className="text-[#00357A] font-semibold">
-            SEO Marketing Excellence
+          Comprehensive   Approach 
+          
           </span>{' '}
-          Through a <br />
-          Holistic Strategy
+          for the Digital Marketing -<br />
+          
         </h1>
         <p className="text-[18px] md:text-[20px] text-gray-700">
           Access end-to-end SEO services through our structured and agile methodology.

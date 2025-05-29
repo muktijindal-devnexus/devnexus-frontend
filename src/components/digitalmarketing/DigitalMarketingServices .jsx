@@ -4,8 +4,7 @@ import React, { useState } from 'react';
 const services = [
   {
     title: 'Search Engine Optimization (SEO)',
-    description:
-      'We provide comprehensive Search Engine Optimization services, our tailor-made strategies are perfect for your brand. It contains a range of services like keyword research, on-page optimization, technical SEO, etc. Does not matter if you are a start-up or a business, we have the solutions for all your business needs.',
+    description:'We provide comprehensive Search Engine Optimization services, our tailor-made strategies are perfect for your brand. It contains a range of services like keyword research, on-page optimization, technical SEO,etc. Does not matter if you are a start-up or a business, we have the solutions for all your business needs.',
     points: [
       'Keyword Research & Strategy',
       'Link Building & Authority Growth',
@@ -13,10 +12,16 @@ const services = [
       'Local & Enterprise SEO',
     ],
   },
+    {
+    title: 'PPC',
+    description: 'DevNexus Solutions is providing expert PPC services designed to maximize your online advertising ROI.  Our PPC experts focus on strategic keyword targeting, compelling ad creation, and advanced campaign management skills.  We are helping the business to reach its desired audience. Whether you want to boost website traffic, generate leads, or increase ROI, DevNexus Solutions is making sure that your PPC campaigns are cost-effective.',
+    points: [
+  
+    ],
+  },
   {
     title: 'Social Media Marketing (SMM)',
-    description:
-      'Our SMM services help you build a strong presence on platforms like Instagram, Facebook, and LinkedIn to engage your audience and drive conversions.',
+    description: 'DexNexus Solutions delivers expert Social Media Marketing services that help businesses build a strong online presence and engage effectively with their potential audience. From strategy development and campaign management, tracking insights for performance. We have a tailor-made system for all the brand types.',
     points: [
       'Content Creation & Scheduling',
       'Audience Engagement',

@@ -4,6 +4,7 @@ import { Navbar } from "@/components/global/Navbar";
 import Footer from "@/components/global/Footer";
 import { ContactForm } from "@/components/global/ContactForm";
 import ChatBot from "@/components/global/Chatboat";
+import InstagramCarousel from "@/components/global/Instagram";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +35,7 @@ export default function RootLayout({ children }) {
       >
         <Navbar />
         {children}
+        <InstagramCarousel />
         <ContactForm />
         <ChatBot />
         <Footer />

@@ -4,15 +4,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
-import Brand1 from '../../../public/images/brandslogo/GargBrick.svg';
-import Brand2 from '../../../public/images/brandslogo/AA.svg';
 import Brand3 from '../../../public/images/brandslogo/Jindal.svg';
 import Brand4 from '../../../public/images/brandslogo/Studio.svg';
 import Brand5 from '../../../public/images/brandslogo/Rotunneling.svg';
 import Brand6 from '../../../public/images/brandslogo/travel.svg';
 import Brand7 from '../../../public/images/brandslogo/DCI.svg';
-import Brand8 from '../../../public/images/brandslogo/AA.svg';
-import Brand9 from '../../../public/images/brandslogo/Circle.svg';
 import Brand10 from '../../../public/images/brandslogo/SRE.svg';
 import Brand11 from '../../../public/images/brandslogo/KG.svg';
 import Brand12 from '../../../public/images/brandslogo/nano.svg';
@@ -20,8 +16,6 @@ import Brand13 from '../../../public/images/brandslogo/cafe.svg';
 import Brand14 from '../../../public/images/brandslogo/vize.svg';
 
 const brands = [
-  Brand1.src,
-  Brand2.src,
   Brand3.src,
   Brand4.src,
   Brand5.src,
@@ -30,8 +24,6 @@ const brands = [
 ];
 
 const brand2 = [
-  Brand8.src,
-  Brand9.src,
   Brand10.src,
   Brand11.src,
   Brand12.src,

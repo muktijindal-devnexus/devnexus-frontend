@@ -41,18 +41,29 @@ const techData = {
     { name: "Node.js", icon: ReactIcon },
     { name: "Express.js", icon: NextIcon },
     { name: "Nest.js", icon: TailwindIcon },
+    { name: "Python", icon: FlutterIcon },
+    { name: "Django", icon: FlutterIcon },
+    { name: "Flask", icon: FlutterIcon },
+    { name: "Sprint Boot", icon: FlutterIcon },
+
+    { name: "Java", icon: FlutterIcon },
+    { name: "GSpring Boot", icon: FlutterIcon },
+
     { name: "Graph QL", icon: FlutterIcon },
   ],
   Database: [
     { name: "MongoDB", icon: TailwindIcon },
     { name: "MySQL", icon: HtmlIcon },
     { name: "PostgreSQL", icon: CSSIcon },
+    { name: "FireBase", icon: CSSIcon },
   ],
   "UI/UX": [
     { name: "Figma", icon: UIIcon },
     { name: "Adobe XD", icon: MUIIcon },
     { name: "Adobe Illustrator", icon: MUIIcon },
     { name: "Adobe Photoshop", icon: MUIIcon },
+    { name: "Canva  ", icon: MUIIcon },
+
 
   ],
   CMS: [

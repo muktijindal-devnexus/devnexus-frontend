@@ -10,8 +10,12 @@ export const ServiceComponent = () => {
                <Banners
                                       image={BannerImage1}
                                       overlayImage
-                                      heading="Mobile App Development Services That Transform Ideas Into Reality"
-                                      description="Transforming ideas into high-performing Android & iOS applications"
+                                      heading="Our Services"
+                                      description="Welcome to DevNexus Solutions, your premier destination for 
+                                      innovative custom software solutions. Our team of custom software development
+                                       experts is dedicated to transforming your business ideas into reality with 
+                                       precision and excellence. At DevNexus Solutions, we pride ourselves on delivering 
+                                       top-notch software tailored to meet your unique needs."
                                     />
                                     <ServicesSection />
                                     <OurProcess />

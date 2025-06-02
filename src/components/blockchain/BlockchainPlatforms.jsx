@@ -4,16 +4,18 @@ import Image from "next/image";
 const platforms = [
   { name: "Etherium", src: "/platforms/ethereum.png" },
   { name: "Solana", src: "/platforms/solana.png" },
-  { name: "Stellar", src: "/platforms/stellar.png" },
-  { name: "Hyperledger", src: "/platforms/hyperledger.png" },
-  { name: "Credits", src: "/platforms/credits.png" },
-  { name: "Bigchaindb", src: "/platforms/bigchaindb.png" },
-  { name: "Hashgraph", src: "/platforms/hashgraph.png" },
-  { name: "Ripple", src: "/platforms/ripple.png" },
-  { name: "Corda", src: "/platforms/corda.png" },
-  { name: "Multichain", src: "/platforms/multichain.png" },
-  { name: "Tron", src: "/platforms/tron.png" },
-  { name: "EOS", src: "/platforms/eos.png" },
+  { name: "Hyperledger", src: "/platforms/stellar.png" },
+  { name: "Corda", src: "/platforms/hyperledger.png" },
+  { name: "Polkadot", src: "/platforms/credits.png" },
+  { name: "Steller", src: "/platforms/bigchaindb.png" },
+  { name: "Hadera", src: "/platforms/hashgraph.png" },
+  { name: "Tezos", src: "/platforms/ripple.png" },
+  { name: "Algorand", src: "/platforms/corda.png" },
+  { name: "Stellar", src: "/platforms/multichain.png" },
+  { name: "Cardano", src: "/platforms/tron.png" },
+  { name: "Hybrid Chain", src: "/platforms/eos.png" },
+  { name: "Multi-chain", src: "/platforms/eos.png" },
+
 ];
 
 const BlockchainPlatforms = () => {

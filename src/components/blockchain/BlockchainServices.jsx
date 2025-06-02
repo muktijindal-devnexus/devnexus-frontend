@@ -5,40 +5,31 @@ import { useState } from "react";
 const steps = [
   {
     number: "01",
-    title: "Discovery Process",
+    title: "Custom Blockchain Development",
     description:
-      "In the very first process we will understand your business goals, challenges and what changes we should start with. Through in depth research and market research trends, we assess the feasibility of blockchain for your use case and define a tailored roadmap.",
+      "Build your blockchain solution from scratch. At DevNexus Solutions, our team of experts is designing, developing, and deploying private, public blockchain networks with custom consensus algorithms and smart functionality. ",
   },
   {
     number: "02",
-    title: "Architecture & Select The Technology",
-    description: "",
+    title: "Smart Contract Development",
+    description: "Our Blockchain App Development team is automating the transaction and business process with self-executing smart contracts. At DevNexus Solutions, we write secure and efficient smart contracts for technology like Ethereum, Binance Smart Chain, Polygon, etc.",
   },
   {
     number: "03",
-    title: "UI/UX Design",
-    description: "",
+    title: " Decentralized Application (dApp) Development",
+    description: "We are designing and developing user-friendly Decentralized Application (dApp) for finance, gaming, healthcare, and other industries. Our team of experts ensures a seamless user experience on the blockchain. ",
   },
   {
     number: "04",
-    title: "Blockchain Integration",
-    description: "",
+    title: "NFT Marketplace Development",
+    description: "Launch your own NFT marketplace with secure trading and wallet integration. We are offering custom features for art, gaming, and metaverse platforms. ",
   },
   {
     number: "05",
-    title: "Smart Contract and Backend Development",
-    description: "",
+    title: "Crypto Wallet Development",
+    description: "At DevNexus Solutions, we are creating secure, multi currency crytpo wallets with various features biometric security and seamless integration with dApps and other apps.",
   },
-  {
-    number: "06",
-    title: "Testing",
-    description: "",
-  },
-  {
-    number: "07",
-    title: "Deployment",
-    description: "",
-  },
+
 ];
 
 const BlockchainServices = () => {

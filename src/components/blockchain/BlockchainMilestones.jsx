@@ -5,15 +5,15 @@ import milestoneImage from "../../../public/images/Blockchain/blockchain 2030.pn
 const milestones = [
   {
     number: "01.",
-    text: "By 2030 The blockchain market is projected to reach a market volume of nearly $1,432 million, growing at a CAGR of over 90%.",
+    text: "By 2030 Blockchain projection is expected of US$ 53,182.9 million with CAGR over 90%.",
   },
   {
     number: "02.",
-    text: "By 2030 Blockchain is poised to generate a business value of $3.1 trillion by 2030.",
+    text: "Business value is expected to reach by $3.1 trillion in 2030.",
   },
   {
     number: "03.",
-    text: "By 2030 The number of users in the cryptocurrency market is poised to reach $1 billion by 2030.",
+    text: "Expected users in blockchain market are 1 billion 2030.",
   },
 ];
 

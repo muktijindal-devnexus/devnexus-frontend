@@ -10,19 +10,25 @@ const slides = [
     id: 1,
     title: "User Centric Approach",
     description:
-      "We first understand the requirements of the client so that we can connect with the target audience. We do comprehensive user research and persona development which ensures design aligns with the user needs and behaviours.",
+      "At DevNexus Solutions, we first understand the requirements of the client so that we can connect with the target audience. We do comprehensive user research and persona development which ensures design aligns with the user needs and behaviours. ",
   },
   {
     id: 2,
-    title: "Design Thinking",
+    title: "Expertise Over diverse Platform",
     description:
-      "We use design thinking methodologies to craft seamless user journeys that are intuitive and effective, ensuring user satisfaction and business success.",
+      "At DevNexus solutions we have the experience to create ux ui design across various platforms, including web and mobile applications. ",
   },
   {
     id: 3,
-    title: "Consistent Branding",
+    title: "Collaborative and Transparent Process",
     description:
-      "Our team ensures all design elements are consistent with your brand identity to build trust and recognition across all platforms.",
+      "DevNexus Solutions involves clients throughout the design journey that has begun till the end point. We give regular feedback which make sure that the end product aligns with your vision. ",
+  },
+  {
+    id: 4,
+    title: "Commitment to Innovation",
+    description:
+      "Capturing the latest design and technologies, DevNexus crafting innovative solutions which meet with current standards and trends. Their attention to detail and commitment towards ensuring quality that each ui ux design functionally or visualising is appealing. ",
   },
 ];
 

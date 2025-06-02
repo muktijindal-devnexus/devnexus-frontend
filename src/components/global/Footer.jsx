@@ -1,5 +1,5 @@
-// import { FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
-// import { IoClose } from "react-icons/io5";
+import { FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import { IoClose } from "react-icons/io5";
 
 export default function Footer() {
   return (
@@ -56,12 +56,12 @@ export default function Footer() {
         {/* Social & Newsletter */}
         <div>
           <h3 className="font-semibold text-white mb-2">Join Our Community</h3>
-          {/* <div className="flex gap-3 mb-4 text-white text-xl">
+          <div className="flex gap-3 mb-4 text-white text-xl">
             <FaInstagram />
             <FaFacebookF />
             <IoClose />
             <FaLinkedinIn />
-          </div> */}
+          </div>
           <h4 className="text-sm font-medium mb-2">
             Subscribe us for Latest News
           </h4>

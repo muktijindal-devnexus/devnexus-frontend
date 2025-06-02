@@ -12,6 +12,9 @@ export default function ChatBot() {
   const [finalSelection, setFinalSelection] = useState("");
   const [showMessageBox, setShowMessageBox] = useState(false);
   const [message, setMessage] = useState("");
+  const [fullName, setFullName] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [countryCode, setCountryCode] = useState("+91");
 
   const chatFlow = {
     start: {
@@ -101,6 +104,8 @@ Address: Noida Sector 63, UP, India`,
     setCurrentNodeKey("start");
     setCurrentOptions(Object.keys(chatFlow.start.options));
     setEmail("");
+    setPhoneNumber("");
+    setFullName("");
     setFinalSelection("");
     setAwaitingEmail(false);
     setShowMessageBox(false);
@@ -128,7 +133,7 @@ Address: Noida Sector 63, UP, India`,
         {
           type: "bot",
           text:
-            "Got it! Before we move forward, could you please share your email address with us?",
+            "Got it! Before we move forward, could you please share your full name, phone number and email?",
         },
       ]);
       setFinalSelection(option);
@@ -138,27 +143,41 @@ Address: Noida Sector 63, UP, India`,
   };
 
   const handleEmailSubmit = () => {
-    if (validateEmail(email)) {
-      setChatLog((prev) => [
-        ...prev,
-        { type: "user", text: email },
-        {
-          type: "bot",
-          text:
-            "Thank you for sharing your email! Please write any message or query you have below. or you can exit from here",
-        },
-      ]);
-      setAwaitingEmail(false);
-      setShowMessageBox(true);
-      console.log("📩 Submission Details:");
-      console.log("Last Selected Option:", finalSelection);
-      console.log("Email:", email);
-    } else {
-      setChatLog((prev) => [
-        ...prev,
-        { type: "bot", text: "Please enter a valid email address." },
-      ]);
+    if (!fullName.trim()) {
+      setChatLog((prev) => [...prev, { type: "bot", text: "Please enter your full name." }]);
+      return;
     }
+
+    if (!/^\d{7,15}$/.test(phoneNumber)) {
+      setChatLog((prev) => [...prev, { type: "bot", text: "Please enter a valid phone number." }]);
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      setChatLog((prev) => [...prev, { type: "bot", text: "Please enter a valid email address." }]);
+      return;
+    }
+
+    setChatLog((prev) => [
+      ...prev,
+      { type: "user", text: `Name: ${fullName}` },
+      { type: "user", text: `Phone: ${countryCode} ${phoneNumber}` },
+      { type: "user", text: `Email: ${email}` },
+      {
+        type: "bot",
+        text:
+          "Thank you for sharing your details! Please write any message or query you have below, or you can exit from here.",
+      },
+    ]);
+
+    setAwaitingEmail(false);
+    setShowMessageBox(true);
+
+    console.log("📩 Submission Details:");
+    console.log("Full Name:", fullName);
+    console.log("Phone:", `${countryCode} ${phoneNumber}`);
+    console.log("Email:", email);
+    console.log("Last Selected Option:", finalSelection);
   };
 
   const handleMessageSubmit = () => {
@@ -185,10 +204,8 @@ Address: Noida Sector 63, UP, India`,
   return (
     <div className="fixed bottom-4 right-4 z-50">
       {!chatOpen && (
-        <button
-          onClick={handleStartChat}
-        >
-         <Image src='/images/contact/contact.svg' width={60} height={60} alt="COntact" />
+        <button onClick={handleStartChat}>
+          <Image src='/images/contact/contact.svg' width={60} height={60} alt="Contact" />
         </button>
       )}
 
@@ -198,7 +215,7 @@ Address: Noida Sector 63, UP, India`,
             <h3 className="font-semibold text-lg">Chat Assistant</h3>
             <button
               onClick={() => setChatOpen(false)}
-              className="text-sm text-[#00357A] "
+              className="text-sm text-[#00357A]"
             >
               ✕
             </button>
@@ -211,7 +228,7 @@ Address: Noida Sector 63, UP, India`,
                 className={`px-3 py-2 rounded-lg max-w-[80%] text-sm ${
                   msg.type === "user"
                     ? "bg-[#00357A] ml-auto text-right text-white"
-                    : "bg-white border-[#00357A]"
+                    : "bg-white border border-[#00357A]"
                 }`}
               >
                 {msg.text}
@@ -234,17 +251,44 @@ Address: Noida Sector 63, UP, India`,
           {awaitingEmail && (
             <div className="flex flex-col gap-2 mb-2">
               <input
+                type="text"
+                placeholder="Full Name"
+                value={fullName}
+                onChange={(e) => setFullName(e.target.value)}
+                className="w-full px-3 py-2 border rounded"
+              />
+              <div className="flex gap-2">
+                <select
+                  value={countryCode}
+                  onChange={(e) => setCountryCode(e.target.value)}
+                  className="px-2 py-2 border rounded w-24 text-sm"
+                >
+                  <option value="+91">🇮🇳 +91</option>
+                  <option value="+1">🇺🇸 +1</option>
+                  <option value="+44">🇬🇧 +44</option>
+                  <option value="+61">🇦🇺 +61</option>
+                  <option value="+81">🇯🇵 +81</option>
+                </select>
+                <input
+                  type="tel"
+                  placeholder="Phone Number"
+                  value={phoneNumber}
+                  onChange={(e) => setPhoneNumber(e.target.value)}
+                  className="w-full px-3 py-2 border rounded"
+                />
+              </div>
+              <input
                 type="email"
-                placeholder="Enter your email"
+                placeholder="Email Address"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full px-3 py-2 border rounded"
               />
               <button
                 onClick={handleEmailSubmit}
-                className="bg-[#00357A] text-white px-3 py-2 rounded  text-sm"
+                className="bg-[#00357A] text-white px-3 py-2 rounded text-sm"
               >
-                Submit Email
+                Submit Details
               </button>
             </div>
           )}
@@ -260,7 +304,7 @@ Address: Noida Sector 63, UP, India`,
               />
               <button
                 onClick={handleMessageSubmit}
-                className="bg-[#00357A] text-white px-3 py-2 rounded  text-sm"
+                className="bg-[#00357A] text-white px-3 py-2 rounded text-sm"
               >
                 Submit Message
               </button>

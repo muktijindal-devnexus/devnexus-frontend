@@ -1,31 +1,35 @@
-'use client'
+'use client';
 import Image from "next/image";
 import React from "react";
-import DigitalMarketing from "../../../public/images/image 81.png";
+import DigitalMarketing from "../../../public/images/Services/DigitalMarketing.jpeg";
+import FullStackDev from "../../../public/images/Services/Web.jpeg";
+import UIUX from "../../../public/images/Services/WebDesign.jpeg";
+import MobileDev from "../../../public/images/Services/Mobile.jpeg";
+import Blockchain from "../../../public/images/Services/Blockchain.jpeg";
+import AITech from "../../../public/images/Services/ai.jpeg";
 import BannerSheet from "../../../public/images/ServiceBannerSheet.png";
 import { MoveRight } from "lucide-react";
 import Link from "next/link";
 
 const services = [
-  { title: "Digital Marketing", href: "/digitalmarketing" },
-  { title: "Full-Stack Development", href: "/fullstackdevelopment" },
-  { title: "UI/UX Designing", href: "/uiux" },
-  { title: "Mobile Development", href: "/mobiledevelopment" },
-  { title: "Blockchain development", href: "/blockchain" },
-  { title: "AI Technologies", href: "/ai-tech" },
+  { title: "Digital Marketing", href: "/digital-marketing-services", image: DigitalMarketing },
+  { title: "Full-Stack Development", href: "/web-design-development-services", image: FullStackDev },
+  { title: "UI/UX Designing", href: "/uiux", image: UIUX },
+  { title: "Mobile Development", href: "/mobile-development-services", image: MobileDev },
+  { title: "Blockchain Development", href: "/blockchain-development-services", image: Blockchain },
+  { title: "AI Technologies", href: "/ai-tech-services", image: AITech },
 ];
 
 export const OfferedServices = () => {
   return (
     <section className="px-4 md:px-8 lg:px-16 py-10">
-      <div className="flex flex-col lg:flex-row items-start lg:items-center gap-4 lg:gap-10">
+      <div className="flex flex-col lg:flex-row items-start justify-center text-center lg:items-center gap-4 lg:gap-10">
         <h1 className="font-semibold text-2xl md:text-3xl lg:text-[34px] text-[#335D95] leading-snug">
           Services Offered by <br />
           <span className="text-[#00357A] text-[30px] md:text-[36px] lg:text-[40px] font-bold">
             DevNexus Solutions
           </span>
         </h1>
-        <div className="w-full lg:w-[62%] h-[3px] bg-[#00357A] mt-6 lg:mt-14"></div>
       </div>
 
       {/* Cards with custom scroll */}
@@ -44,29 +48,38 @@ export const OfferedServices = () => {
             key={index}
             style={{
               flexShrink: 0,
-              width: "300px",
+              width: "280px",
               height: "350px",
               boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
               position: "relative",
+              borderRadius: "10px",
+              overflow: "hidden",
             }}
           >
+            {/* Background Image */}
             <Image
-              src={DigitalMarketing}
+              src={service.image}
               alt={service.title}
               fill
-              className="object-cover z-0"
+              className="object-cover z-0 "
             />
+
+            {/* Overlay Sheet */}
             <Image
               src={BannerSheet}
-              alt="Banner Sheet"
+              alt="Overlay"
               fill
-              className="object-cover z-10 absolute"
+              className="absolute object-cover z-10 opacity-60"
             />
+
+            {/* Text Content */}
             <div className="absolute inset-0 z-20 flex w-[100px] text-white text-xl font-semibold p-8 leading-8">
               <h2 className="text-white text-lg md:text-xl font-semibold leading-8">
                 {service.title}
               </h2>
             </div>
+
+            {/* Button */}
             <Link href={service.href} passHref>
               <div className="bg-white text-blue-950 h-8 py-2 px-6 rounded-xl text-center items-center flex absolute z-50 bottom-10 right-10 cursor-pointer">
                 <MoveRight />
@@ -76,7 +89,7 @@ export const OfferedServices = () => {
         ))}
       </div>
 
-      {/* Embedded scrollbar styles */}
+      {/* Scrollbar styles */}
       <style jsx>{`
         .custom-scroll::-webkit-scrollbar {
           height: 10px;

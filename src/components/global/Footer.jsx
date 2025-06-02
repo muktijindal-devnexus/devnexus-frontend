@@ -3,30 +3,36 @@
 
 export default function Footer() {
   return (
-    <footer className="bg-[#003B80] text-white p-8">
-      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8 border-b border-white/30 pb-8">
+    <section className="bg-[#003B80] text-white p-8">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 border-b border-white/30 pb-8">
         {/* Logo and Contact Info */}
         <div>
-          <div className="flex items-center gap-3 mb-3">
+          <div className="flex items-center gap-2 pb-5">
+            <img src="/images/logo.svg" alt="Logo" className="h-14 w-auto" />
             <div>
-              <h2 className="text-lg font-bold">DevNexus Solutions</h2>
-              <p className="text-sm text-gray-300">INNOVATE • BUILD • GROW</p>
+              <div>
+                <h1 className="text-sm font-bold">DevNexus Solutions</h1>
+                <p className="text-xs text-gray-300">INNOVATE • BUILD • GROW</p>
+              </div>
             </div>
           </div>
           <p className="text-sm text-gray-300">
-            <span className="font-semibold text-white">Email:</span> contactus@devnexus.in
+            <span className="font-semibold text-white">Email:</span>{" "}
+            contactus@devnexus.in
           </p>
           <p className="text-sm text-gray-300">
-            <span className="font-semibold text-white">Phone:</span> +91 9711010160
+            <span className="font-semibold text-white">Phone:</span> +91
+            9711010160
           </p>
           <p className="text-sm text-gray-300">
-            <span className="font-semibold text-white">Location:</span> 26-B, Spaze Itech Park, Sector-49, Gurgaon, 122001
+            <span className="font-semibold text-white">Location:</span> 26-B,
+            Spaze Itech Park, Sector-49, Gurgaon, 122001
           </p>
         </div>
 
         {/* Explore On */}
-        <div>
-          <h3 className="font-semibold text-white mb-2">Explore On</h3>
+        <div className="pl-20">
+          <h3 className="font-semibold text-white mb-2 ">Explore On</h3>
           <ul className="text-sm text-gray-300 space-y-1">
             <li>Home</li>
             <li>About us</li>
@@ -56,22 +62,22 @@ export default function Footer() {
             <IoClose />
             <FaLinkedinIn />
           </div> */}
-          <h4 className="text-sm font-medium mb-2">Subscribe us for Latest News</h4>
-          <div className="flex items-center">
+          <h4 className="text-sm font-medium mb-2">
+            Subscribe us for Latest News
+          </h4>
+          <div className="flex items-center gap-4">
             <input
               type="email"
               placeholder="Enter your email"
-              className="px-3 py-2 text-sm rounded-l-md w-full text-black"
+              className="px-3 py-2 text-sm rounded-md w-full text-black bg-white focus:outline-none focus:ring-0 focus:border-transparent"
             />
-            <button className="bg-white text-[#003B80] px-4 py-2 rounded-r-md text-sm">
+
+            <button className=" px-6 py-1 rounded-md text-sm text-white border border-white">
               Submit
             </button>
           </div>
         </div>
       </div>
-
-   
-    </footer>
-    
+    </section>
   );
 }

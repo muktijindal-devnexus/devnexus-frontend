@@ -7,11 +7,15 @@ export const Banner = ({ image, heading, description }) => {
   return (
     <div className="relative w-full h-[500px] md:h-[600px] select-none px-4 sm:px-8 md:px-16 overflow-hidden">
       {/* Background Image */}
-      <Image
+   
+         <video
         src={image}
-        alt="background"
-        fill
-        className="object-cover z-0 transition-all duration-500"
+        
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-0 transition-all duration-400"
       />
 
       {/* Optional Overlay Sheet */}
@@ -25,8 +29,8 @@ export const Banner = ({ image, heading, description }) => {
       )}
 
       {/* Centered Content */}
-      <div className="absolute inset-0 z-20 flex items-center justify-center text-white px-4">
-        <div className="text-center max-w-2xl">
+      <div className="absolute inset-0 z-20 flex items-center text-white px-10">
+        <div className="max-w-2xl">
           <h1 className="text-xl sm:text-3xl md:text-5xl font-bold mb-3 md:mb-4 leading-tight font-[Montserrat]">
             {heading}
           </h1>

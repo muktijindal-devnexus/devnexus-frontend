@@ -2,7 +2,7 @@ export default function DesignProcess() {
   return (
     <div className="min-h-screen bg-white flex flex-col items-center justify-center px-4 py-10">
       {/* UX Design Process */}
-      <div className="relative w-[440px] h-[440px] mb-24">
+      <div className="relative w-[940px] h-[440px] ">
         {/* UX Steps */}
         <div className="absolute top-0 left-1/2 transform -translate-x-1/2">
           <Step number="3" label="Ideation" />
@@ -28,24 +28,24 @@ export default function DesignProcess() {
       </div>
 
       {/* Divider */}
-      <div className="w-full border-t border-gray-300 mb-24 max-w-[600px]"></div>
+      <div className="w-full border-2 border-gray-300 mb-24 max-w-[900px]"></div>
 
       {/* UI Design Process */}
-      <div className="relative w-[440px] h-[440px]">
+      <div className="relative w-[940px] h-[440px]">
         {/* UI Steps */}
-        <div className="absolute top-0 left-1/2 transform -translate-x-1/2">
+        <div className="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2">
           <Step number="3" label="Wire Framing & Layout Design" />
         </div>
-        <div className="absolute top-[18%] left-[4%]">
+        <div className="absolute top-[1%] left-[2%]">
           <Step number="2" label="Information Architecture" />
         </div>
-        <div className="absolute top-[68%] left-[2%]">
+        <div className="absolute top-[48%] left-[4%]">
           <Step number="1" label="Research & Discovery" />
         </div>
-        <div className="absolute top-[68%] right-[2%]">
+        <div className="absolute top-[48%] right-[4%]">
           <Step number="5" label="Prototyping & Testing" />
         </div>
-        <div className="absolute top-[18%] right-[4%]">
+        <div className="absolute top-[1%] right-[4%]">
           <Step number="4" label="Visual Design" />
         </div>
 

@@ -1,13 +1,13 @@
-
-import { ServiceComponent } from '@/components/services'
+import { ServiceComponent } from '@/components/servicecomponent';
 import React from 'react'
 
-const Service = () => {
+const Servicepage = () => {
   return (
     <div>
-     <ServiceComponent />
+        <ServiceComponent />
     </div>
   )
 }
 
-export default Service
+
+export default Servicepage;

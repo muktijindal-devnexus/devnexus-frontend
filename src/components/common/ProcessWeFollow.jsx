@@ -45,7 +45,7 @@ export const ProcessWeFollow = () => {
         </div>
     
 
-        <div className="mt-10 flex flex-col md:flex-row justify-center items-stretch gap-4 flex-wrap">
+        <div className="mt-10 flex flex-col md:flex-row justify-center items-stretch gap-8 flex-wrap">
           {steps.map((step, index) => (
             <div
               key={index}

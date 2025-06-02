@@ -1,29 +1,26 @@
 'use client'
-import Image from 'next/image'
+import Link from 'next/link'
 import React, { useState } from 'react'
 import Arrow from '../../../public/images/Arrow.svg'
-import BannerImage1 from '../../../public/images/BannerImage.jpg'
-import BannerImage2 from '../../../public/images/BannerImage1.jpg'
-import BannerImage3 from '../../../public/images/BannerImage2.jpg'
-import BannerSheet from '../../../public/images/Bannersheet.png'
+import Image from 'next/image'
 
+// Replace these with your actual video imports or URLs
 const bannerData = [
   {
-    image: BannerImage1,
+    video: '/images/Banner/Digital.mp4',
     heading: 'Transforming Ideas into Digital Excellence',
     description: 'We craft cutting-edge digital solutions that drive growth, enhance user experience, and elevate your brand. From software development to strategic marketing, we turn your vision into reality.',
   },
   {
-    image: BannerImage2,
+    video: '/images/Banner/Industries.mp4',
     heading: 'Innovative Designs that Speak for You',
     description: 'Our team delivers pixel-perfect designs and seamless UX, ensuring your users stay engaged and loyal.',
   },
   {
-    image: BannerImage3,
+    video: '/images/Banner/Team.mp4',
     heading: 'Code That Powers Your Ambition',
     description: 'From scalable architecture to flawless deployment, we build robust applications that grow with your business.',
   },
-  
 ]
 
 export const Banner = () => {
@@ -32,21 +29,20 @@ export const Banner = () => {
 
   return (
     <div className="relative w-full h-[500px] md:h-[600px] select-none px-4 sm:px-8 md:px-16 overflow-hidden">
-      {/* Background and overlay images */}
-      <Image
-        src={activeBanner.image}
-        alt="banner"
-        fill
-        className="object-cover z-0 transition-all duration-500"
-      />
-      <Image
-        src={BannerSheet}
-        alt="banner sheet"
-        fill
-        className="object-cover z-10 transition-all duration-500"
+      {/* Background Video */}
+      <video
+        src={activeBanner.video}
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-0 transition-all duration-500"
       />
 
-      {/* Text content */}
+      {/* Overlay (Optional gradient or image for styling) */}
+      <div className="absolute inset-0 bg-black/40 z-10" />
+
+      {/* Text Content */}
       <div className="absolute inset-0 z-20 flex flex-col justify-center text-white px-4 sm:px-6 md:px-10 w-full md:w-[55%]">
         <h1 className="text-xl sm:text-3xl md:text-5xl font-bold mb-3 md:mb-4 leading-tight font-[Montserrat]">
           {activeBanner.heading}
@@ -54,10 +50,12 @@ export const Banner = () => {
         <span className="text-sm sm:text-base md:text-lg mb-4 md:mb-6 leading-6 md:leading-8">
           {activeBanner.description}
         </span>
-        <span className="flex items-center gap-2 pt-4 cursor-pointer text-sm sm:text-base w-fit">
-          Request Quote
-          <Image src={Arrow} alt="arrow" width={30} height={15} />
-        </span>
+        <Link href="/contact" passHref>
+          <span className="flex items-center gap-2 pt-4 cursor-pointer text-sm sm:text-base w-fit">
+            Request Quote
+            <Image src={Arrow} alt="arrow" width={30} height={15} />
+          </span>
+        </Link>
 
         {/* Dots */}
         <div className="flex gap-4 mt-6">

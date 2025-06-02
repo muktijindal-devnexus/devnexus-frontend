@@ -1,17 +1,17 @@
 import React from 'react'
-import { Banner } from "../global/Banner";
-import BannerImage1 from "../../../public/images/BannerImage.jpg";
+import BannerImage1 from "../../../public/images/About/about.png";
 import FoundersSection from './FounderSection';
 import Slider from '../common/Slider';
 import WhatWeDo from './WhatWeDo';
 import { AboutDevnexus } from './ContentSection';
 import OurValues from './OurValues';
+import { Banners } from '../global/NavBanners';
 
 
 export const AboutComponent = () => {
   return (
     <div>
-            <Banner
+            <Banners
                 image={BannerImage1}
                 overlayImage
                 heading="Trusted Blockchain Development Company  "

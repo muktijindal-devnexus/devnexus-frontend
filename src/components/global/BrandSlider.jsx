@@ -20,32 +20,33 @@ import Brand13 from '../../../public/images/brandslogo/cafe.svg';
 import Brand14 from '../../../public/images/brandslogo/vize.svg';
 
 const brands = [
- Brand1.src,
+  Brand1.src,
   Brand2.src,
-   Brand3.src,
-    Brand4.src,
-     Brand5.src,
- Brand6.src,
+  Brand3.src,
+  Brand4.src,
+  Brand5.src,
+  Brand6.src,
   Brand7.src,
 ];
-const brand2 = [
- Brand8.src,
-  Brand9.src,
-   Brand10.src,
-    Brand11.src,
-     Brand12.src,
- Brand13.src,
- Brand14.src,
 
+const brand2 = [
+  Brand8.src,
+  Brand9.src,
+  Brand10.src,
+  Brand11.src,
+  Brand12.src,
+  Brand13.src,
+  Brand14.src,
 ];
 
 export default function BrandSlider() {
   return (
-    <div className="relative bg-white p-[70px] mt-[100px] ">
+    <div className="relative bg-white p-[70px] mt-[100px]">
+      
       {/* Dotted Circle */}
-      <div className="absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+      <div className="absolute z-30 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
         <div className="h-[350px] w-[350px] border-2 mt-[60px] mb-[60px] border-dotted border-[#00357A] rounded-full flex items-center justify-center">
-          <div className="w-[225px] h-[225px] bg-white flex items-center justify-center  rounded-full text-center shadow-md">
+          <div className="w-[225px] h-[225px] bg-white flex items-center justify-center rounded-full text-center shadow-md">
             <p className="text-[#00357A] font-semibold text-lg leading-tight">
               Brands We've <br /> Worked With
             </p>
@@ -53,8 +54,14 @@ export default function BrandSlider() {
         </div>
       </div>
 
-      {/* Swiper Row 1 - Left to Right */}
-      
+      {/* Blur Effect Under the Circle */}
+      <div className="absolute z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+        <div className="h-[350px] w-[350px] rounded-full overflow-hidden">
+          <div className="w-full h-full backdrop-blur-md" />
+        </div>
+      </div>
+
+      {/* Swiper Row 1 */}
       <Swiper
         modules={[Autoplay]}
         slidesPerView={6}
@@ -66,7 +73,7 @@ export default function BrandSlider() {
         }}
         speed={5000}
         grabCursor={true}
-        className="mt-12 px-4"
+        className="mt-12 px-4 z-10 relative"
       >
         {[...brands, ...brands].map((logo, i) => (
           <SwiperSlide key={`top-${i}`}>
@@ -79,7 +86,7 @@ export default function BrandSlider() {
         ))}
       </Swiper>
 
-      {/* Swiper Row 2 - Right to Left */}
+      {/* Swiper Row 2 */}
       <Swiper
         dir="rtl"
         modules={[Autoplay]}
@@ -92,7 +99,7 @@ export default function BrandSlider() {
         }}
         speed={5000}
         grabCursor={true}
-        className="mt-2 px-4"
+        className="mt-2 px-4 z-10 relative"
       >
         {[...brand2, ...brand2].map((logo, i) => (
           <SwiperSlide key={`bottom-${i}`}>

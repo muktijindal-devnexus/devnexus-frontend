@@ -1,16 +1,16 @@
 import React from 'react'
 import HiringSection from './HiringSection'
 import JobOpenings from './JobOpenings'
-import { Banner } from '../global/Banner'
-import BannerImage1 from '../../../public/images/BannerImage1.jpg'
+import BannerImage1 from '../../../public/images/career/career.jpeg'
 import OurValues from './OurValues'
 import GoodCompanySection from './GoodCompany'
+import { Banners } from '../global/NavBanners'
 
 
 export const Career = () => {
   return (
     <div>
-         <Banner
+         <Banners
                 image={BannerImage1}
                 overlayImage
                 heading="Mobile App Development Services That Transform Ideas Into Reality"

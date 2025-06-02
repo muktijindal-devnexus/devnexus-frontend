@@ -4,6 +4,7 @@ import UnderConstruction from "../../../public/images/UnderConstruction.png";
 
 export const Blogs = () => {
   return (
+    
     <section className="flex flex-col justify-center items-center">
       <div className="relative w-[250px] h-[250px]">
         <Image

@@ -52,6 +52,7 @@
     "streamsearch": "^1.1.0",
     "styled-jsx": "^5.1.6",
     "swiper": "^10.3.1",
+    "tailwind-scrollbar-hide": "^2.0.0",
     "tapable": "^2.2.1",
     "tar": "^7.4.3",
     "tslib": "^2.8.1",

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Banner } from '../global/Banner'
-import BannerImage1 from '../../../public/images/BannerImage.jpg'
+import BannerImage1 from '../../../public/images/contact/contactherosection.jpeg'
 import ContactSection from './ContactSection'
 import IndustryExperience from './GlobalSection'
 

@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from 'next/link'
 import Design from "../../../public/images/design 1.svg";
 import Image1 from "../../../public/images/innovation1.svg";
 import Image2 from "../../../public/images/innovation2.svg";
@@ -109,15 +110,17 @@ export default function ServiceGrid() {
       </div>
 
       {/* Button */}
-      <div className="flex justify-center mt-12">
-        <motion.button
-          whileHover={{ scale: 1.1, backgroundColor: "#00357A", color: "#fff" }}
-          whileTap={{ scale: 0.95 }}
-          className="px-6 py-3 border border-[#00357A] text-[#00357A] rounded-md font-medium transition-all"
-        >
-          Know more
-        </motion.button>
-      </div>
+<div className="flex justify-center mt-12">
+  <Link href="/about">
+    <motion.button
+      whileHover={{ scale: 1.1, backgroundColor: "#00357A", color: "#fff" }}
+      whileTap={{ scale: 0.95 }}
+      className="px-6 py-3 border border-[#00357A] text-[#00357A] rounded-md font-medium transition-all"
+    >
+      Know more
+    </motion.button>
+  </Link>
+</div>
     </section>
   );
 }

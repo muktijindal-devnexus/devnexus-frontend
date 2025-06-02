@@ -1,18 +1,18 @@
-import BannerImage1 from '../../../public/images/BannerImage.jpg'
+
 import { Banner } from '@/components/global/Banner'
 import StatusCard from '@/components/common/Status'
 import WhyChooseUs from '@/components/common/WhyChooseUs'
 import ExecutionSection from '@/components/common/ExecutionSection'
 import React from 'react'
 import { ProcessWeFollow } from '../common/ProcessWeFollow'
-import BrandSlider from '../global/BrandSlider'
 import FaqSection from '../global/FaqSection'
+import Slider from '../common/Slider'
 
 export const Fullstack = () => {
   return (
     <div>
             <Banner
-                    image={BannerImage1}
+                 image="/images/fullstack/fullstackHero.mp4"
                     overlayImage
                     heading="Web Design and Development Services That Clicks, Convert and Captivate "
                     description="Creating seamless, high-performing websites that engage users and drive results"
@@ -20,8 +20,9 @@ export const Fullstack = () => {
                    <StatusCard />
                       <WhyChooseUs />
                         <ExecutionSection />
+                         <Slider />
                         <ProcessWeFollow />
-                        <BrandSlider />
+                       
                         <FaqSection />
     </div>
   )

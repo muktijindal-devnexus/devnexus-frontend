@@ -40,8 +40,8 @@ const techData = {
   Backend: [
     { name: "Node.js", icon: ReactIcon },
     { name: "Express.js", icon: NextIcon },
-    { name: "Django", icon: TailwindIcon },
-    { name: "Flask", icon: FlutterIcon },
+    { name: "Nest.js", icon: TailwindIcon },
+    { name: "Graph QL", icon: FlutterIcon },
   ],
   Database: [
     { name: "MongoDB", icon: TailwindIcon },
@@ -51,12 +51,21 @@ const techData = {
   "UI/UX": [
     { name: "Figma", icon: UIIcon },
     { name: "Adobe XD", icon: MUIIcon },
+    { name: "Adobe Illustrator", icon: MUIIcon },
+    { name: "Adobe Photoshop", icon: MUIIcon },
+
   ],
   CMS: [
     { name: "WordPress", icon: CMSIcon },
-    { name: "Strapi", icon: MUIIcon },
+    { name: "Shopify", icon: MUIIcon },
+    { name: "Webflow", icon: MUIIcon },
+    { name: "Woo Commerce", icon: MUIIcon },
   ],
   Deveops: [
+    { name: "AWS", icon: CSSIcon },
+    { name: "EC2", icon: CSSIcon },
+    { name: "Azure", icon: CSSIcon },
+    { name: "Digital Ocean", icon: CSSIcon },
     { name: "Docker", icon: CSSIcon },
     { name: "Kubernetes", icon: ReactIcon },
     { name: "GitHub Actions", icon: HtmlIcon },

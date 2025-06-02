@@ -4,12 +4,12 @@ import { OfferedServices } from "../common/OfferedServices";
 import Technologies from "./Technologies";
 import { OurProcess } from "./OurProcess";
 import { Contact } from "./ContactBanner";
-import { Testimonial } from "../global/Testimonial";
 import BrandSlider from "../global/BrandSlider";
 import { IndustriesWorked } from "./IndustriesWorked";
 import { Product } from "./Product";
 import { Banner } from "./Banner";
 import { KeyFacts } from "./KeyFacts";
+import { Testimonial } from "../global/Testimonial";
 
 const LandingComponent = () => {
   return (

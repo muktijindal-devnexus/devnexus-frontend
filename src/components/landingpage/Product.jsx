@@ -2,12 +2,16 @@ import Image from 'next/image';
 import React from 'react';
 
 const projects = [
-  { name: "BeYoung", image: "/images/beyoung.png" },
-  { name: "Cervino Ceramix", image: "/images/jindalbricks.png" },
-  { name: "Send Mail Reminder", image:  "/images/beyoung.png" },
-  { name: "Web Map", image:  "/images/beyoung.png" },
-  { name: "Cervino Ceramix", image: "/images/jindalbricks.png" },
-  { name: "Cervino Ceramix", image: "/images/jindalbricks.png" },
+  { name: "Cervino Ceramix", image: "/images/Project/cervano.png" },
+  { name: "Cervino Ceramix", image: "/images/Project/xrdnano.png" },
+  { name: "Send Mail Reminder", image: "/images/Project/agprojects.png" },
+  { name: "Web Map", image:  "/images/Project/bergamot.png" },
+  { name: "Cervino Ceramix", image: "/images/Project/iowit.png" },
+  { name: "Cervino Ceramix", image: "/images/Project/medklaire.png" },
+    { name: "BeYoung", image: "/images/Project/sreindiarealty.png" },
+  { name: "Cervino Ceramix", image: "/images/Project/rsisinternational.png" },
+  { name: "Cervino Ceramix", image: "/images/Project/peaceofmind.png" },
+
 ];
 
 export const Product = () => {
@@ -34,7 +38,7 @@ export const Product = () => {
                   src={project.image}
                   alt={project.name}
                   width={250}
-                  height={1000} // Height can be set to your tallest image
+                  height={500} // Height can be set to your tallest image
                   className="w-full object-cover"
                 />
               </div>

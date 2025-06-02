@@ -34,7 +34,7 @@ export const KeyFacts = () => {
         <div className="space-y-8">
           <div className="text-center">
             <div className="text-4xl font-medium text-[#7E7E7E]">
-              {inView ? <CountUp end={800} duration={3} /> : '0'}+
+              {inView ? <CountUp end={95} duration={3} /> : '0'}%
             </div>
             <h3 className="mt-2 text-lg font-medium text-[#335D95]">
               Happy Customers
@@ -43,7 +43,7 @@ export const KeyFacts = () => {
 
           <div className="text-center">
             <div className="text-4xl font-medium text-[#7E7E7E]">
-              {inView ? <CountUp end={1500} duration={2.5} /> : '0'}+
+              {inView ? <CountUp end={1100} duration={2.5} /> : '0'}+
             </div>
             <h3 className="mt-2 text-lg font-medium text-[#335D95]">
               Projects Done
@@ -72,7 +72,7 @@ export const KeyFacts = () => {
             width={200}
             height={200}
             className="object-contain animate-spin"
-            style={{ animationDuration: "6s" }}
+            style={{ animationDuration: "16s" }}
           />
         </div>
 
@@ -80,7 +80,7 @@ export const KeyFacts = () => {
         <div className="space-y-8">
           <div className="text-center">
             <div className="text-4xl font-medium text-[#7E7E7E]">
-              {inView ? <CountUp end={30} duration={5.5} /> : '0'}+
+              {inView ? <CountUp end={130} duration={6.5} /> : '0'}+
             </div>
             <h3 className="mt-2 text-lg font-medium text-[#335D95]">
               Employees
@@ -89,7 +89,7 @@ export const KeyFacts = () => {
 
           <div className="text-center">
             <div className="text-4xl font-medium text-[#7E7E7E]">
-              {inView ? <CountUp end={5} duration={6.2} /> : '0'}+
+              {inView ? <CountUp end={14} duration={6.2} /> : '0'}+
             </div>
             <h3 className="mt-2 text-lg font-medium text-[#335D95]">
               Years Experience

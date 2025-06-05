@@ -38,48 +38,45 @@ const techData = {
     { name: "REACT NATIVE", icon: NativeIcon },
   ],
   Backend: [
-    { name: "Node.js", icon: ReactIcon },
-    { name: "Express.js", icon: NextIcon },
-    { name: "Nest.js", icon: TailwindIcon },
-    { name: "Python", icon: FlutterIcon },
-    { name: "Django", icon: FlutterIcon },
-    { name: "Flask", icon: FlutterIcon },
-    { name: "Sprint Boot", icon: FlutterIcon },
+    { name: "Node.js", icon: '/images/technology/nodejs.png' },
+    { name: "Express.js", icon: '/images/technology/expressjs.svg' },
+    { name: "Nest.js", icon: '/images/technology/Nest.svg' },
+    { name: "Python", icon: '/images/technology/python.svg' },
+    { name: "Django", icon: '/images/technology/Django.svg' },
+    { name: "Flask", icon: '/images/technology/flask.svg' },
 
-    { name: "Java", icon: FlutterIcon },
-    { name: "GSpring Boot", icon: FlutterIcon },
 
-    { name: "Graph QL", icon: FlutterIcon },
+    { name: "Java", icon: '/images/technology/java.svg' },
+    { name: "Spring Boot", icon: '/images/technology/spring.svg' },
+
+    { name: "Graph QL", icon: '/images/technology/graphql.svg' },
   ],
   Database: [
-    { name: "MongoDB", icon: TailwindIcon },
-    { name: "MySQL", icon: HtmlIcon },
-    { name: "PostgreSQL", icon: CSSIcon },
-    { name: "FireBase", icon: CSSIcon },
+    { name: "MongoDB", icon: '/images/technology/mongodb.svg' },
+    { name: "MySQL", icon: '/images/technology/Mysql.svg' },
+    { name: "PostgreSQL", icon: '/images/technology/postsql.svg' },
+    { name: "FireBase", icon: '/images/technology/firebase.svg' },
   ],
   "UI/UX": [
-    { name: "Figma", icon: UIIcon },
-    { name: "Adobe XD", icon: MUIIcon },
-    { name: "Adobe Illustrator", icon: MUIIcon },
-    { name: "Adobe Photoshop", icon: MUIIcon },
-    { name: "Canva  ", icon: MUIIcon },
+    { name: "Figma", icon: '/images/technology/figma.svg' },
+    { name: "Adobe XD", icon: '/images/technology/XD.svg' },
+    { name: "Adobe Illustrator", icon: '/images/technology/illustrator.svg' },
+    { name: "Adobe Photoshop", icon: '/images/technology/photoshop.svg' },
+    { name: "Canva  ", icon: '/images/technology/canva.svg' },
 
 
   ],
   CMS: [
-    { name: "WordPress", icon: CMSIcon },
-    { name: "Shopify", icon: MUIIcon },
-    { name: "Webflow", icon: MUIIcon },
-    { name: "Woo Commerce", icon: MUIIcon },
+    { name: "WordPress", icon: '/images/technology/Wordpress.svg'  },
+    { name: "Shopify", icon: '/images/technology/shopify.svg' },
+    { name: "Webflow", icon: '/images/technology/webflow.svg' },
+    { name: "Woo Commerce", icon: '/images/technology/woo.svg' },
   ],
   Deveops: [
-    { name: "AWS", icon: CSSIcon },
-    { name: "EC2", icon: CSSIcon },
-    { name: "Azure", icon: CSSIcon },
-    { name: "Digital Ocean", icon: CSSIcon },
-    { name: "Docker", icon: CSSIcon },
-    { name: "Kubernetes", icon: ReactIcon },
-    { name: "GitHub Actions", icon: HtmlIcon },
+    { name: "AWS", icon: '/images/technology/aws.svg' },
+    { name: "Azure", icon: '/images/technology/azure.svg' },
+    { name: "Digital Ocean", icon: '/images/technology/digitalocean.svg' },
+
   ],
 };
 
@@ -125,6 +122,7 @@ const Technologies = () => {
               src={tech.icon}
               alt={tech.name}
               className="mb-2"
+              width={80}
               height={80}
             />
             <span className="text-sm font-semibold">{tech.name}</span>

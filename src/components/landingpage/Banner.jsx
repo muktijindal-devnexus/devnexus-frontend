@@ -13,13 +13,13 @@ const bannerData = [
   },
   {
     video: '/images/Banner/Industries.mp4',
-    heading: 'Innovative Designs that Speak for You',
-    description: 'Our team delivers pixel-perfect designs and seamless UX, ensuring your users stay engaged and loyal.',
+    heading: 'Empowering Various Industries to Thrive in a Digital Era',
+    description: 'We specialize in driving digital transformation across a wide range of industries, empowering businesses to innovate, streamline in todays fast-moving digital world.',
   },
   {
     video: '/images/Banner/Team.mp4',
-    heading: 'Code That Powers Your Ambition',
-    description: 'From scalable architecture to flawless deployment, we build robust applications that grow with your business.',
+    heading: 'Our Expert Minds Crafting Future-Ready Solutions.',
+    description: 'At DevNexus Solutions, our strength is our expert team, passionate professionals dedicated to delivering tailored digital transformation solutions.',
   },
 ]
 

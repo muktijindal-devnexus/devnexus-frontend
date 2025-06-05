@@ -4,58 +4,53 @@ import { FaClipboardList, FaLaptopCode, FaSearch } from 'react-icons/fa';
 const cardData = [
   {
     icon: <FaClipboardList size={24} />,
-    title: 'Project Requirements',
+    title: 'Understanding Of Your Business',
     description:
-      'We start by having a conversation with our client through virtual or live meetings to get an idea about their project requirements.',
+      'At DevNexus Solutions, we believe that every business needs an in-depth study. This is the reason our team of experts starts with a deep understanding of your business from the ground level. These foundation steps make sure that every plan is perfectly aligned with brand goals, industry and potential audience. ',
   },
   {
     icon: <FaLaptopCode size={24} />,
-    title: 'Website Analysis',
+    title: 'Audience & Market Research',
     description:
-      'Then our experts come into the game and analyze their website to identify where we need to do some work and what can be done to enhance its visibility digitally.',
+      'We believe that every successful digital marketing begins with understanding your audience, where your brand fits for better visibility. This step is all about collecting insights that power effective, target-market campaigns. ',
   },
   {
     icon: <FaSearch size={24} />,
-    title: 'Market & Keyword Research',
+    title: 'Crafting a Data-Driven Strategy',
     description:
-      'Once we have gone through your website, we perform rigorous market and keyword research according to your niche to boost SEO performance.',
+      'Our team of specialists not only depends on market estimates but also constructs digital marketing strategies that are data-oriented and tailored to your business objectives. All of our decisions consider insights developed from your analytics ecosystem and an intimate knowledge of your audience.',
   },
   {
     icon: <FaSearch size={24} />,
-    title: 'Market & Keyword Research',
+    title: 'Content That Connects',
     description:
-      'Once we have gone through your website, we perform rigorous market and keyword research according to your niche to boost SEO performance.',
+      'Content is the bridge between your brand and your audience. At DevNexus Solutions, we believe in creating content which does not just inform but inspire, engage and drives actions.',
   },
     {
     icon: <FaSearch size={24} />,
-    title: 'Market & Keyword Research',
+    title: 'Campaign Execution & Management',
     description:
-      'Once we have gone through your website, we perform rigorous market and keyword research according to your niche to boost SEO performance.',
+      'At DevNexus Solutions, we are transforming strategy into action with seamless execution and proactive management. Our goal is simple: to ensure the digital marketing campaign delivers maximum impact on time and budget. ',
   },
     {
     icon: <FaSearch size={24} />,
-    title: 'Market & Keyword Research',
+    title: 'Performance Tracking ',
     description:
-      'Once we have gone through your website, we perform rigorous market and keyword research according to your niche to boost SEO performance.',
+      'At DevNexus Solutions, we believe which perform tracking is the backbone of a successful digital marketing strategy. We begin with clear goals, measurable KPIs which align with your business objectives. Using tools like Google Analytics, Google Search Console, Meta Business Suite and LinkedIn analytics, we are monitoring performance across all channels in real time, ensuring every campaign stays on track.',
   },
     {
     icon: <FaSearch size={24} />,
-    title: 'Market & Keyword Research',
+    title: 'Continuous Optimization',
     description:
-      'Once we have gone through your website, we perform rigorous market and keyword research according to your niche to boost SEO performance.',
+      'Digital Marketing is the process of learning and improving continuously. Thats why optimization is the core of everything we do, our team gives a close eye on the result after campaigns have been published From testing new creative ideas adjusting targeting parameters and refining strategy to implement AB testing our teams approach is proactive and agile. By staying ahead of market trends and consumer behaviour changes, we make sure that your campaigns remain relevant, competitive',
   },
     {
     icon: <FaSearch size={24} />,
-    title: 'Market & Keyword Research',
+    title: 'Transparency & Collaboration',
     description:
-      'Once we have gone through your website, we perform rigorous market and keyword research according to your niche to boost SEO performance.',
+      'We follow transparent, collaborative and open communication with our clients. We see ourselves as an extension of your team, working closely with you every step of the way. From clear reporting, regular process updates, to honest feedback and open discussion. Our digital marketing team make sure that you are always informed, involved and confident in the direction of your digital marketing efforts. ',
   },
-    {
-    icon: <FaSearch size={24} />,
-    title: 'Market & Keyword Research',
-    description:
-      'Once we have gone through your website, we perform rigorous market and keyword research according to your niche to boost SEO performance.',
-  },
+ 
 ];
 
 export const SeoMarketing = () => {

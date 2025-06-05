@@ -1,18 +1,18 @@
 import React from 'react'
-import { Banner } from '../global/Banner'
-import BannerImage1 from '../../../public/images/contact/contactherosection.jpeg'
+import BannerImage1 from '../../../public/images/contact/Contactus.jpeg'
 import ContactSection from './ContactSection'
 import IndustryExperience from './GlobalSection'
+import { Banners } from '../global/NavBanners'
 
 
 export const ContactComponents = () => {
   return (
     <div>
-        <Banner
+        <Banners
                 image={BannerImage1}
                 overlayImage
-                heading="Mobile App Development Services That Transform Ideas Into Reality"
-                description="Transforming ideas into high-performing Android & iOS applications"
+                heading="Ready to Transform Your Business? Let's Talk Now!"
+                description="Have a vision for your brand? Let's make it happen together. At DevNexus Solutions, we are here to understand your business and deliver custom digital solutions that drive actual results"
               />
               <ContactSection />
               <IndustryExperience />

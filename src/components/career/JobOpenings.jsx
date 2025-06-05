@@ -12,10 +12,10 @@ import "swiper/css/pagination";
 const JobOpenings = () => {
   const jobPositions = [
     {
-      department: "Designing",
-      position: "Graphic Designer",
+      department: "Deveops",
+      position: "AWS developer",
       location: "Gurgaon",
-      experience: "Fresher to 1 year",
+      experience: "3+ years",
       description: "Job Description",
     },
     {
@@ -26,12 +26,13 @@ const JobOpenings = () => {
       description: "Job Description",
     },
     {
-      department: "Sales",
-      position: "Sales Executive",
+      department: "Developer",
+      position: "Software Developer",
       location: "Gurgaon",
-      experience: "Fresher to 1 year",
+      experience: "2 to 5 year",
       description: "Job Description",
     },
+
     {
       department: "Sales",
       position: "Sales Executive",
@@ -39,27 +40,7 @@ const JobOpenings = () => {
       experience: "Fresher to 1 year",
       description: "Job Description",
     },
-    {
-      department: "Sales",
-      position: "Sales Executive",
-      location: "Gurgaon",
-      experience: "Fresher to 1 year",
-      description: "Job Description",
-    },
-    {
-      department: "Sales",
-      position: "Sales Executive",
-      location: "Gurgaon",
-      experience: "Fresher to 1 year",
-      description: "Job Description",
-    },
-    {
-      department: "Sales",
-      position: "Sales Executive",
-      location: "Gurgaon",
-      experience: "Fresher to 1 year",
-      description: "Job Description",
-    },
+
   ];
 
   // refs for navigation buttons

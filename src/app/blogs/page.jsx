@@ -10,8 +10,8 @@ const BlogPage = () => {
          <Banners
                               image={BannerImage1}
                               overlayImage
-                              heading="Mobile App Development Services That Transform Ideas Into Reality"
-                              description="Transforming ideas into high-performing Android & iOS applications"
+                              heading="Our Blog - DevNexus Solutions"
+                              description="Stay ahead in the digital world with insights given by experts of DevNexus Solutions."
                             />
         <Blogs />
     </div>

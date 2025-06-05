@@ -13,8 +13,8 @@ export const Career = () => {
          <Banners
                 image={BannerImage1}
                 overlayImage
-                heading="Mobile App Development Services That Transform Ideas Into Reality"
-                description="Transforming ideas into high-performing Android & iOS applications"
+                heading="Start Your Next Career Opportunity Here"
+                description="At DevNexus Solutions, we are not only offering jobs, we are building careers. Whether you are a creative thinker, tech lover, or result-driven marketer you will find freedom of work with us."
               />
       <HiringSection />
       <JobOpenings />

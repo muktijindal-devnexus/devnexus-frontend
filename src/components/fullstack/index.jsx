@@ -7,6 +7,17 @@ import { ProcessWeFollow } from "../common/ProcessWeFollow";
 import FaqSection from "../global/FaqSection";
 import Slider from "../common/Slider";
 
+import Brand3 from '../../../public/images/brandslogo/Jindal.svg';
+import Brand4 from '../../../public/images/brandslogo/Studio.svg';
+import Brand5 from '../../../public/images/brandslogo/Rotunneling.svg';
+import Brand6 from '../../../public/images/brandslogo/travel.svg';
+import Brand7 from '../../../public/images/brandslogo/DCI.svg';
+import Brand10 from '../../../public/images/brandslogo/SRE.svg';
+import Brand11 from '../../../public/images/brandslogo/KG.svg';
+import Brand12 from '../../../public/images/brandslogo/nano.svg';
+import Brand13 from '../../../public/images/brandslogo/cafe.svg';
+import Brand14 from '../../../public/images/brandslogo/vize.svg';
+
 const faqData = [
   {
     question: "What domains of business does DevNexus cater to?",
@@ -36,11 +47,20 @@ const faqData = [
     answer:
       "Lets connect. Based on your business domain, marketing preferences, target achievement and in hand budget, we will come up with a tailor-made plan. Depending on various cases, some businesses may prefer comprehensive social media strategies, or web UX changes, others may call for a more formal link building, or a reputation management. E-commerce also prefers Paid Ads. Depending on how and how much you would like to enroll will ensure your strategy for getting started with the services.",
   },
-  {
-    question: "How much does it cost to hire a digital marketing agency?",
-    answer:
-      'The cost of hiring a "digital marketing service" can vary widely, depending on the services you are looking for, business goals, etc. Our monthly services start from $400  and go up to $5000 (+ Ads fee). Packages can be cheaper upon 3-6 months commitment.',
-  },
+
+];
+
+const brandLogos = [
+  Brand3.src,
+  Brand4.src,
+  Brand5.src,
+  Brand6.src,
+  Brand7.src,
+  Brand10.src,
+  Brand11.src,
+  Brand12.src,
+  Brand13.src,
+  Brand14.src,
 ];
 
 export const Fullstack = () => {
@@ -55,7 +75,11 @@ export const Fullstack = () => {
       <StatusCard />
       <WhyChooseUs />
       <ExecutionSection />
-      <Slider />
+         <Slider
+      title="Driving Growth To The Brands."
+      subtitle="We deliver Global IT Services to brands of all sizes"
+      brands={brandLogos}
+    />
       <ProcessWeFollow />
       <FaqSection
         faqs={faqData}

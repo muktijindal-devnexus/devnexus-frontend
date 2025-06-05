@@ -61,8 +61,13 @@ export const ContactForm = () => {
   };
 
   return (
-    <section className="bg-[#f2f7fc] flex justify-center">
-      <div className="w-full max-w-6xl rounded-xl px-16 py-2 flex flex-col lg:flex-row gap-35">
+    <section className=" flex justify-center">
+      <div
+        className="w-full max-w-6xl px-16 py-8 flex flex-col lg:flex-row gap-35"
+        style={{
+          background: "linear-gradient(to right, white, #e9eef4, white)",
+        }}
+      >
         {/* Heading Section */}
         <div className="lg:w-1/3 flex items-center">
           <h1 className="text-2xl lg:text-3xl font-semibold text-[#002b5b] leading-snug">
@@ -71,7 +76,7 @@ export const ContactForm = () => {
         </div>
 
         {/* Form Section */}
-        <div className="lg:w-1/2 w-full bg-white p-6">
+        <div className="lg:w-1/2 w-full bg-[#f9f9f9] p-6 rounded-xl">
           <h2 className="text-xl font-semibold mb-2">Get in Touch</h2>
           <p className="text-sm text-gray-600 mb-6">
             Please fill out the form to help us understand the areas where you
@@ -111,48 +116,46 @@ export const ContactForm = () => {
             )}
 
             {/* Row 2: Country Code, Phone, Website */}
-            <div className="flex flex-col md:flex-row gap-4 ">
-              <div className=" border-[#828282] border-1 rounded-xl w-1/4">
-                <input
-                  value="IN +91"
-                  readOnly
-                  className="w-20 text-center text-sm px-2 py-2 rounded-md"
-                />
+            {/* Row 2: Country Code, Phone, Website */}
+            <div className="flex flex-col md:flex-row gap-4">
+              <div className="border-[#828282] border rounded-xl w-20 flex items-center justify-center bg-gray-100 text-sm font-medium p-1.5 text-center">
+                IN +91
               </div>
-              <div className=" border-[#828282] border-1 rounded-xl w-1/3">
+              <div className="border-[#828282] border rounded-xl w-full md:w-1/3 p-1.5 text-center">
                 <input
                   type="tel"
                   name="phone"
-                  placeholder="Enter Your Number*"
+                  placeholder="Mobile number*"
                   value={formData.phone}
                   onChange={handleChange}
-                  className=" text-center text-sm  py-2 rounded-md"
+                  className="w-full text-center text-[16px] py-2 rounded-md outline-none"
                 />
               </div>
-              <div className=" border-[#828282] border-1 rounded-xl">
+              <div className="border-[#828282] border rounded-xl flex-grow text-center p-1.5">
                 <input
                   type="url"
                   name="website"
                   placeholder="Website URL"
                   value={formData.website}
                   onChange={handleChange}
-                  className=" text-center text-sm px-2 py-2 rounded-md"
+                  className="w-full text-center text-[16px] px-2 py-2 rounded-md outline-none"
                 />
               </div>
             </div>
+
             {errors.phone && (
               <p className="text-red-500 text-sm">{errors.phone}</p>
             )}
 
             {/* Row 3: Looking For */}
-            <div className=" border-[#828282] border-1 rounded-xl w-1/2">
+            <div className=" border-[#828282] border-1 rounded-xl w-1/2 text-center p-1.5">
               <input
                 type="text"
                 name="lookingFor"
                 placeholder="Looking for*"
                 value={formData.lookingFor}
                 onChange={handleChange}
-                className=" text-center text-sm px-2 py-2 rounded-md"
+                className=" text-center text-[16px] px-2 py-2 rounded-md"
               />
             </div>
             {errors.lookingFor && (

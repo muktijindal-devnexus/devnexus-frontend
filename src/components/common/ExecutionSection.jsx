@@ -1,41 +1,41 @@
 const ExecutionSection = () => {
   const cards = [
-    {
-      id: 1,
-      title: "Hybrid App Development",
-      content: "Hybrid App Development combines both worlds, web and native apps, allowing us to build an app that works seamlessly on both iOS and Android systems. Hybrid apps are based on a single codebase, which reduces development time and cost while ensuring to improve user experience.",
-      active: true
-    },
+  {
+  id: 1,
+  title: "Responsive Web Design",
+  content:
+    "We are creating websites which look stunning and function seamlessly across all devices, ensuring that the audience enjoys a better experience whether on Desktop, tablet, or mobile.\n\n• Mobile-First & Cross-Browser Compatibility\n• Modern, Clean & Interactive UI/UX\n• High-Speed Performance Optimization\n• Brand-Consistent Visual Design",
+},
     {
       id: 2,
-      title: "Mobile UX Development",
-      content: "At AI Database Solutions, we focus on creating intuitive interfaces that connect with users. Our team works closely with UI designers to craft experiences that not only look visually appealing but also significantly enhance user engagement and satisfaction.",
-      active: false
+      title: "E-commerce Development",
+      content:
+        "At DevNexus Solutions we are building powerful, secure and user friendly e-commerce websites customized according to your business requirement. From listings of products and shopping carts to integration of payment gateway, our solutions are designed to deliver the best website which performs and converts.\n Shopify, WooCommerce, Magento & Custom Solutions\nProduct Catalogue & Shopping Cart Integration\nSecure Payment Gateway Setup\nMobile-Optimized & Fast-Loading Storefronts ",
     },
     {
       id: 3,
-      title: "AI Integration",
-      content: "Leverage cutting-edge artificial intelligence to automate processes, gain insights from data, and deliver personalized experiences. Our AI solutions integrate seamlessly with your existing systems.",
-      active: false
+      title: "CMS Development (WordPress, Webflow & More)",
+      content:
+        "We specialize in creating dynamic and easy to navigate websites using powerful Content management systems like wordpress, Joomla, etc. Our CMS solutions empower you to update the content, images without much hassle and technical skills. Whether you need a website, a blog, custom portal, DevNexus Solutions ready to deliver the best scalable, SEO friendly website which are tailored to your business goals.",
     },
     {
       id: 4,
-      title: "Cloud Solutions",
-      content: "Scalable cloud infrastructure tailored to your business needs. We provide secure, reliable, and cost-effective cloud services with 24/7 monitoring and support.",
-      active: false
+      title: "Front End Development",
+      content:
+        "Our front end team will bring your vision to life with clean, responsive and interactive design. Using the latest technology like HTML5, CSS3, JavaScript, React, etc. We are developing user centric design which delivers a seamless experience across all types of devices. At DevNexus Solutions we focus on performance, accessibility to ensure your website's functionality. ",
     },
     {
       id: 5,
-      title: "Data Analytics",
-      content: "Transform raw data into actionable insights. Our analytics solutions help you make data-driven decisions with real-time dashboards and predictive modeling.",
-      active: false
+      title: "Custom Web Application Development",
+      content:
+        "We are offering tailor made Website development Services built from the ground up to match your unique business requirement. Whether you need a complex application, portal for business, or multi feature platform, our team of experts are developing scalable, secure and high performing websites. At DevNexus Solution, we are focusing on functionality, user experience and long term growth for your brand.",
     },
     {
       id: 6,
-      title: "IoT Development",
-      content: "Build connected devices and smart solutions with our IoT expertise. From hardware integration to data visualization, we cover the full IoT spectrum.",
-      active: false
-    }
+      title: "Backend Development",
+      content:
+        "At DevNexus Solutions, we are providing a robust, secure and scalable backend system which gives power to your application. From database architecture and development of API our backend team ensures optimal performance and reliability.",
+    },
   ];
 
   return (
@@ -43,27 +43,25 @@ const ExecutionSection = () => {
       {/* Top Title Section */}
       <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-12">
         <h2 className="text-3xl font-bold text-[#1C3C6B] mb-4 lg:mb-0">
-          From Ideas to Execution
+         Range of web development Services
         </h2>
         <p className="text-[#1C3C6B] max-w-xl text-lg leading-relaxed mt-2 lg:mt-0">
-          Getting concepts from our client, we understand the requirement to build a robust mobile app for your business goals.
+        As a Leading Web Design and Web Development Service provider we are providing range of website development services.
         </p>
       </div>
 
       {/* Card Scroll Row */}
-      <div className="flex space-x-6 overflow-x-auto pb-4 ">
+      <div className="flex space-x-6 overflow-x-auto pb-4">
         {cards.map((card) => (
-          <div 
+          <div
             key={card.id}
-            className={`min-w-[488px] max-w-[320px] p-10 rounded-xl border ${
-              card.active ? 'border-[#1C3C6B] ring-2 ring-[#1C3C6B] ring-offset-2' : 'border-[#D3DBE6]'
-            } shadow-lg bg-white transition-all duration-300 hover:shadow-xl`}
+            className="group min-w-[488px] max-w-[320px] p-10 rounded-xl  border-[#D3DBE6] hover:border-[#1C3C6B] border-2 shadow-lg bg-white transition-all duration-300 hover:shadow-xl"
           >
             <div className="flex items-center mb-4">
-              <span className="text-2xl font-bold text-[#1C3C6B] mr-3">
-                {String(card.id).padStart(2, '0')}
+              <span className="text-2xl font-bold text-[#1C3C6B] mr-3 group-hover:text-[#1C3C6B] transition-colors duration-300">
+                {String(card.id).padStart(2, "0")}
               </span>
-              <h3 className="text-xl font-bold text-[#1C3C6B]">
+              <h3 className="text-xl font-bold text-[#1C3C6B] group-hover:text-[#1C3C6B] transition-colors duration-300">
                 {card.title}
               </h3>
             </div>
@@ -73,9 +71,6 @@ const ExecutionSection = () => {
           </div>
         ))}
       </div>
-
-      {/* Progress Indicator */}
- 
     </section>
   );
 };

@@ -1,62 +1,142 @@
-import { FaUsers, FaBullseye, FaHourglassHalf, FaRegClipboard, FaBookOpen } from "react-icons/fa";
+"use client";
+
+import { useEffect, useRef } from "react";
+import Matter from "matter-js";
+import {
+  FaUsers,
+  FaBullseye,
+  FaHourglassHalf,
+  FaRegClipboard,
+  FaBookOpen,
+} from "react-icons/fa";
+
+const icons = [
+  { icon: FaUsers, label: "Teamwork", frictionAir: 0.001 },
+  { icon: FaBullseye, label: "Excellence", frictionAir: 0.02 },
+  { icon: FaHourglassHalf, label: "Transparency", frictionAir: 0.05 },
+  { icon: FaRegClipboard, label: "Accountability", frictionAir: 0.08 },
+  { icon: FaBookOpen, label: "Continuous Learning", frictionAir: 0.1 },
+];
 
 export default function OurValues() {
+  const engine = useRef(Matter.Engine.create());
+  const iconRefs = useRef([]);
+  const canvasRef = useRef(null);
+
+  useEffect(() => {
+    const { Engine, Runner, Bodies, Composite, Events, Body, Mouse, MouseConstraint } = Matter;
+
+    const engineInstance = engine.current;
+    const world = engineInstance.world;
+
+    engineInstance.gravity.y = 0.5;
+
+    const runner = Runner.create();
+    Runner.run(runner, engineInstance);
+
+    const boundsWidth = window.innerWidth;
+    const boundsHeight = canvasRef.current?.offsetHeight || 500; // fixed height
+
+    // Walls
+    const walls = [
+      Bodies.rectangle(boundsWidth / 2, 0, boundsWidth, 30, { isStatic: true }),
+      Bodies.rectangle(boundsWidth / 2, boundsHeight, boundsWidth, 30, { isStatic: true }),
+      Bodies.rectangle(0, boundsHeight / 2, 30, boundsHeight, { isStatic: true }),
+      Bodies.rectangle(boundsWidth, boundsHeight / 2, 30, boundsHeight, { isStatic: true }),
+    ];
+    Composite.add(world, walls);
+
+    // Create icon bodies
+    iconRefs.current.forEach((ref, index) => {
+      if (!ref) return;
+
+      const x = Math.random() * (boundsWidth - 150) + 75; // avoid spawning too close to edges
+      const body = Bodies.rectangle(x, 100, 128, 128, {
+        frictionAir: icons[index].frictionAir,
+        restitution: 0.8,
+      });
+
+      body.element = ref;
+      Composite.add(world, body);
+
+      Body.setVelocity(body, {
+        x: (Math.random() - 0.5) * 5,
+        y: Math.random() * 4,
+      });
+    });
+
+    // Mouse control
+    const mouse = Mouse.create(canvasRef.current);
+    const mouseConstraint = MouseConstraint.create(engineInstance, {
+      mouse,
+      constraint: {
+        stiffness: 0.2,
+        render: { visible: false },
+      },
+    });
+    Composite.add(world, mouseConstraint);
+
+    Matter.Events.on(mouseConstraint, "startdrag", (event) => {
+      if (event.body?.element) {
+        event.body.element.style.cursor = "grabbing";
+      }
+    });
+    Matter.Events.on(mouseConstraint, "enddrag", (event) => {
+      if (event.body?.element) {
+        event.body.element.style.cursor = "grab";
+      }
+    });
+
+    // Sync DOM to physics bodies
+    Events.on(engineInstance, "afterUpdate", () => {
+      Composite.allBodies(world).forEach((body) => {
+        if (body.element) {
+          const x = body.position.x - 64;
+          const y = body.position.y - 64;
+          body.element.style.transform = `translate(${x}px, ${y}px) rotate(${body.angle}rad)`;
+        }
+      });
+    });
+
+    return () => {
+      Runner.stop(runner);
+      Composite.clear(world, false);
+      Engine.clear(engineInstance);
+    };
+  }, []);
+
   return (
-    <section className="py-16 px-6 lg:px-20 bg-white text-[#335D95]">
-      <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col lg:flex-row justify-between mb-12 items-center">
-          <h2 className="text-3xl font-bold text-[#335D95]">Our Values</h2>
-          <p className="mt-4 lg:mt-0 max-w-xl text-[#000000]">
-            From hiring people to training them for building solutions, we have diverse values to establish strong work culture.
-          </p>
-        </div>
+    <section className="relative bg-white py-20">
+      <div className="text-center mb-10 z-10 relative">
+        <h2 className="text-4xl font-bold text-[#335D95]">Our Values</h2>
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {/* Teamwork */}
-          <div>
-            <FaUsers className="text-[#335D95] text-3xl mb-4" />
-            <h3 className="text-xl font-semibold text-[#335D95] mb-2">Teamwork</h3>
-            <p className="text-[#727272]">
-              At DevNexus Solutions, we believe in the power of teamwork to achieve shared goals. Our focus lies in effective collaboration and leveraging each team member’s unique skills, knowledge, and strengths to drive success.
-            </p>
+      {/* Fixed height container */}
+      <div
+        ref={canvasRef}
+        className="relative mx-auto max-w-7xl "
+        style={{ height: "200px" }}
+      >
+        {icons.map(({ icon: Icon, label }, index) => (
+          <div
+            key={index}
+            ref={(el) => (iconRefs.current[index] = el)}
+            className="w-32 h-32 text-[#335D95] flex flex-col items-center justify-center text-center font-semibold"
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              willChange: "transform",
+              zIndex: 10,
+              userSelect: "none",
+              cursor: "grab",
+              pointerEvents: "auto",
+            }}
+          >
+            <Icon className="text-4xl mb-2" />
+            <span className="text-base">{label}</span>
           </div>
-
-          {/* Excellence */}
-          <div>
-            <FaBullseye className="text-[#335D95] text-3xl mb-4" />
-            <h3 className="text-xl font-semibold text-[#335D95] mb-2">Excellence</h3>
-             <p className="text-[#727272]">
-              DevNexus strive for excellence ensures that the services offered meet or exceed customer expectations. We are committed to surpass standards and achieve the highest level of efficiency.
-            </p>
-          </div>
-
-          {/* Transparency */}
-          <div>
-            <FaHourglassHalf className="text-[#335D95] text-3xl mb-4" />
-            <h3 className="text-xl font-semibold text-[#335D95] mb-2">Transparency</h3>
-            <p className="text-[#727272]">
-              We promote openness, honesty, and the clear communication of information both internal and external. DevNexus shares information about its operations, decision-making processes, and financial performance openly.
-            </p>
-          </div>
-
-          {/* Accountability */}
-          <div>
-            <FaRegClipboard className="text-[#335D95] text-3xl mb-4" />
-            <h3 className="text-xl font-semibold text-[#335D95] mb-2">Accountability</h3>
-            <p className="text-[#727272]">
-              We make employees accountable to fulfill their duties and meet project deadlines. Employees take responsibility for one’s actions, decisions, and performance. Being accountable is the key aspect of a healthy work environment.
-            </p>
-          </div>
-
-          {/* Continuous Learning */}
-          <div>
-            <FaBookOpen className="text-[#335D95] text-3xl mb-4" />
-            <h3 className="text-xl font-semibold text-[#335D95] mb-2">Continuous Learning</h3>
-            <p className="text-[#727272]">
-              We ensure continuous learning for every employee for ongoing, voluntary, and self-motivated pursuit of personal development. Continuous learning is a critical component of professional development and career growth.
-            </p>
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   );

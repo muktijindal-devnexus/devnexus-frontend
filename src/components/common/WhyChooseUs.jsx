@@ -2,24 +2,24 @@ import { FaProjectDiagram } from "react-icons/fa";
 
 const features = [
   {
-    title: "Agile and Scalability",
+    title: "Creative & Responsive Design",
     description:
-      "Our agile methodology ensures faster delivery, flexibility to adapt to changes, and the ability to scale your app as the requirements of your business.",
+      "We are creating eye catching, user friendly designs which adapt seamlessly across all devices to make sure an exceptional user experience.",
   },
   {
-    title: "Native Development",
+    title: "Clean & Scalable Code",
     description:
-      "Does not matter if you need a single codebase for Android, iOS app for a single codebase or both; we tailored our strategy to meet those requirements.",
+      "At DevNexus Solutions our team of experts write efficient, well structured code which ensures high performance and easily scalable as your business grows.",
   },
   {
-    title: "Client Centric Approach",
+    title: "Cutting-Edge Technology",
     description:
-      "We prioritise your vision and keep transparent communication clear, collaborative, and transparent from day one till launching of the app or beyond.",
+      " DevNexus Solutions use the latest tools and framework to make sure the future ready solutions for your brand. ",
   },
   {
-    title: "End-to-End Expertise",
+    title: "Client-Centric Approach",
     description:
-      "Our team of experts delivers end-to-end services from strategy to UI/UX design to development, testing, and deployment. We handle the full mobile app life cycle to ensure a seamless experience.",
+      " We are prioritising your business goals and vision delivering tailored web solutions that truly align with your brand and audience requirement. ",
   },
 ];
 
@@ -29,8 +29,8 @@ const WhyChooseUs = () => {
       <div className="max-w-7xl mx-auto">
         <h2 className="text-center text-xl sm:text-2xl md:text-3xl font-light mb-12">
           What makes{" "}
-          <span className="font-semibold text-blue-900">DevNexus Solutions</span> a better option
-          for <span className="font-semibold text-blue-900">Mobile App Development</span> services?
+          <span className="font-semibold text-blue-900">DevNexus Solutions</span> better for
+          for <span className="font-semibold text-blue-900">Web Design and  Web Development</span> services?
         </h2>
 
         <div className="grid md:grid-cols-3 gap-6">

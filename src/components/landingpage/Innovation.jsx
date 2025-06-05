@@ -2,12 +2,15 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from 'next/link'
+import Link from "next/link";
+
+// Assets
 import Design from "../../../public/images/design 1.svg";
 import Image1 from "../../../public/images/innovation1.svg";
 import Image2 from "../../../public/images/innovation2.svg";
 import Image3 from "../../../public/images/innovation3.svg";
 import Image4 from "../../../public/images/innovation4.svg";
+import Workspace from "../../../public/images/workspace.png"; 
 
 const services = [
   { title: "User-focused, result-driven approach", icon: Image1 },
@@ -16,111 +19,84 @@ const services = [
   { title: "Scalable & future-ready development", icon: Image4 },
 ];
 
-export default function ServiceGrid() {
-  const floatingCorners = [
-    { className: "top-0 left-0", transform: "-scale-y-100" },
-    { className: "top-0 right-0", transform: "-scale-x-100" },
-    { className: "bottom-0 left-0", transform: "-scale-y-100" },
-    { className: "bottom-0 right-0", transform: "-scale-100" },
-  ];
+export default function AboutUs() {
+
 
   return (
-    <section className="relative bg-[#E5EBF2] overflow-hidden py-16 px-4">
+    <section className="relative bg-white overflow-hidden py-16 px-6 md:px-20">
       {/* Floating Corners */}
-      {floatingCorners.map((pos, idx) => (
-        <motion.div
-          key={idx}
-          animate={{ y: [0, 10, 0, -10, 0], x: [0, 10, 0, -10, 0] }}
-          transition={{ duration: 6, repeat: Infinity }}
-          className={`absolute w-[165px] h-[145px] ${pos.className} ${pos.transform}`}
-        >
-          <Image src={Design} alt={`corner-${idx}`} className="w-full h-full object-cover" />
-        </motion.div>
-      ))}
 
-      {/* Services Grid with Center Box */}
-      <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-3 gap-y-12">
-        {/* Top Left Service */}
+
+      {/* Main Content Grid */}
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        {/* Left: Image */}
         <motion.div
-          className="flex flex-col items-center text-center p-6 bg-white shadow-md rounded-lg hover:shadow-blue-100 transition-transform"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          whileHover={{ scale: 1.1 }}
+          className="rounded-xl overflow-hidden shadow-lg"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <Image src={services[0].icon} alt="" width={88} height={88} className="mb-3" />
-          <p className="text-sm">{services[0].title}</p>
+          <Image
+            src={Workspace}
+            alt="Workspace"
+            className="w-full h-[275px] object-cover"
+          />
+            {/* Features Grid */}
+          <div className="grid grid-cols-2 gap-4 bg-[#F5FBFF] mt-5 p-4">
+            {services.map((service, index) => (
+              <motion.div
+                key={index}
+                className="flex flex-col items-center text-center p-4 bg-white rounded-xl shadow hover:shadow-blue-100 transition-transform"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Image src={service.icon} alt="" width={50} height={50} className="mb-3" />
+                <p className="text-xs text-gray-800">{service.title}</p>
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
 
-        {/* Center Box */}
+        {/* Right: Text + Features */}
         <motion.div
-          className="flex flex-col items-center justify-center text-center p-6 bg-white shadow-lg rounded-xl w-[477px] relative top-[70%] right-[10%]"
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
+          className="bg-gradient-to-br from-white to-[#f8f9fd]  rounded-2xl shadow-md p-15"
         >
-          <p className="text-sm text-gray-700">
-          DevNexus Solutions is a leading digital agency delivering custom software, web/mobile apps, UI/UX design, and marketing services. We empower startups and enterprises with innovative, scalable, and user-focused digital solutions.
+              <p className="text-lg text-[#00357A]">INNOVATE • BUILD • GROW</p>
+          <h2 className="text-4xl md:text-3xl font-semibold leading-snug mb-4 w-[70%] font-[Montserrat] py-8">
+            Beyond Code — Where  <span className="text-[#00357A] font-bold">Developers </span>
+            Shape  <span className="text-[#00357A] font-bold">the Future. </span>
+          </h2>
+          <p className="text-gray-600 text-sm leading-relaxed mb-6 w-[70%]">
+           At DevNexus Solutions, we believe in the transformative power of technology and 
+           the people who are building it. Our mission is to empower businesses with fast-forward
+            thinking
+            solutions that bridge today's challenges with tomorrow's innovations.
           </p>
-        </motion.div>
 
-        {/* Top Right Service */}
-        <motion.div
-          className="flex flex-col items-center text-center p-6 bg-white shadow-md rounded-lg hover:shadow-blue-100 transition-transform"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          whileHover={{ scale: 1.1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <Image src={services[1].icon} alt="" width={88} height={88} className="mb-3" />
-          <p className="text-sm">{services[1].title}</p>
-        </motion.div>
+        
 
-        {/* Bottom Left Service */}
-        <motion.div
-          className="flex flex-col items-center text-center p-6 bg-white shadow-md rounded-lg hover:shadow-blue-100 transition-transform"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          whileHover={{ scale: 1.1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <Image src={services[2].icon} alt="" width={88} height={88} className="mb-3" />
-          <p className="text-sm">{services[2].title}</p>
-        </motion.div>
-
-        {/* Spacer to keep grid alignment */}
-        <div className="hidden sm:block" />
-
-        {/* Bottom Right Service */}
-        <motion.div
-          className="flex flex-col items-center text-center p-6 bg-white shadow-md rounded-lg hover:shadow-blue-100 transition-transform"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          whileHover={{ scale: 1.1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <Image src={services[3].icon} alt="" width={88} height={88} className="mb-3" />
-          <p className="text-sm">{services[3].title}</p>
+          {/* Know More Button */}
+          <div className="flex justify-start mt-8">
+            <Link href="/about">
+              <motion.button
+                whileHover={{ scale: 1.05, backgroundColor: "#00357A", color: "#fff" }}
+                whileTap={{ scale: 0.95 }}
+                className="px-6 py-2 border border-[#00357A] text-[#00357A] rounded-md font-medium transition-all"
+              >
+                Know more
+              </motion.button>
+            </Link>
+          </div>
         </motion.div>
       </div>
-
-      {/* Button */}
-<div className="flex justify-center mt-12">
-  <Link href="/about">
-    <motion.button
-      whileHover={{ scale: 1.1, backgroundColor: "#00357A", color: "#fff" }}
-      whileTap={{ scale: 0.95 }}
-      className="px-6 py-3 border border-[#00357A] text-[#00357A] rounded-md font-medium transition-all"
-    >
-      Know more
-    </motion.button>
-  </Link>
-</div>
     </section>
   );
 }

@@ -14,8 +14,15 @@ import Brand11 from '../../../public/images/brandslogo/KG.svg';
 import Brand12 from '../../../public/images/brandslogo/nano.svg';
 import Brand13 from '../../../public/images/brandslogo/cafe.svg';
 import Brand14 from '../../../public/images/brandslogo/vize.svg';
+import Brand1 from '../../../public/images/brandslogo/AJP.svg';
+import Brand2 from '../../../public/images/brandslogo/cervano.svg';
+import Brand8 from '../../../public/images/brandslogo/peace.svg';
+import Brand9 from '../../../public/images/brandslogo/RA.png';
+
 
 const brands = [
+  Brand1.src,
+  Brand2.src,
   Brand3.src,
   Brand4.src,
   Brand5.src,
@@ -24,6 +31,9 @@ const brands = [
 ];
 
 const brand2 = [
+Brand9.src,
+  Brand8.src,
+  Brand5.src,
   Brand10.src,
   Brand11.src,
   Brand12.src,

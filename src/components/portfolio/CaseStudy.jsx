@@ -4,35 +4,39 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { ArrowUpRight, X } from 'lucide-react';
 
-export default function CaseStudyCard() {
+export default function CaseStudyCard({
+  title,
+  description,
+  logoSrc,
+  imageIcons = [],
+  mainImage,
+  websiteUrl,
+  pdfPath,
+  companyName,
+  index,  // <-- receive index prop here
+}) {
   const [isOpen, setIsOpen] = useState(false);
 
+  // Check if index is odd or even for layout toggle
+  const isEven = index % 2 === 0;
+
   return (
-    <section className="flex flex-col lg:flex-row items-center gap-8 bg-white p-6 rounded-xl shadow-md max-w-6xl mx-auto">
-      
-      {/* Left Section */}
-      <div className="flex-1 relative bg-[#f5f5f5] rounded-lg p-4 w-full">
-        <div className="flex items-center gap-4 mb-4">
-          <Image src="/brick-icon.png" alt="Brick Icon" width={50} height={50} />
-          <Image src="/code-icon.png" alt="Code Icon" width={50} height={50} />
-          <div className="w-14 h-14 rounded-full overflow-hidden border-4 border-white shadow-md">
-            <Image src="/buildings.jpg" alt="Buildings" width={56} height={56} className="object-cover" />
-          </div>
-        </div>
-        <h2 className="text-xl font-semibold leading-tight">
-          Case Study: Web Development & Digital Marketing for Cervino Ceramix
-        </h2>
+    <section
+      className={`flex flex-col lg:flex-row items-center gap-10 bg-white p-6 rounded-xl shadow-md max-w-6xl mx-auto ${
+        !isEven ? 'lg:flex-row-reverse' : ''
+      }`}
+    >
+      {/* Left or Right Section - Main Image */}
+      <div className="flex-1 relative w-full">
+        <Image src={mainImage} width={500} height={400} alt={`${companyName} Main`} />
       </div>
 
-      {/* Right Section */}
+      {/* Right or Left Section - Content */}
       <div className="flex-1">
-        <div className="flex items-center gap-3 mb-4">
-          <Image src="/cervino-logo.png" alt="Cervino Logo" width={40} height={40} />
-          <h3 className="text-xl font-bold">Cervino Ceramix</h3>
+        <div className="flex items-center justify-center gap-3 mb-4">
+          <Image src={logoSrc} alt={`${companyName} Logo`} width={140} height={140} />
         </div>
-        <p className="text-gray-600 mb-4">
-          Cervino Ceramix LLP, a fast-emerging Indian manufacturer based in Jhajjar, Haryana, specializes in high-end bricks and tiles. Launched in 2022, Cervino merges traditional handcrafted materials with modern specifications. Their target customers include architects, interior designers, builders, and discerning end-users. The product range features:
-        </p>
+        <p className="text-gray-600 mb-8">{description}</p>
 
         <div className="flex gap-4">
           <button
@@ -42,7 +46,7 @@ export default function CaseStudyCard() {
             View Case Study &gt;&gt;
           </button>
           <a
-            href="https://cervinoceramix.com"
+            href={websiteUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center text-[#00357A] font-medium hover:underline"
@@ -63,10 +67,10 @@ export default function CaseStudyCard() {
               <X size={24} />
             </button>
             <iframe
-              src="/cervino-case-study.pdf" // Make sure this file exists in the /public folder
+              src={pdfPath}
               className="w-full h-[80vh]"
               frameBorder="0"
-              title="Cervino Case Study"
+              title={`${companyName} Case Study`}
             ></iframe>
           </div>
         </div>

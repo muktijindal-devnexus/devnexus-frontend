@@ -25,6 +25,7 @@ const montserrat = Montserrat({
 export const metadata = {
   title: " Global IT Services in USA - DevNexus Solution",
   description: "Seeking Global IT Services in USA? Look no further than DevNexus Solution a Best Marketing Company to boost traffic leads and growth. Contact us.",
+  
 };
 
 export default function RootLayout({ children }) {

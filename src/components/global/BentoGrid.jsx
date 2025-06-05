@@ -8,14 +8,16 @@ const testimonials = [
     review:
       "DevNexus just gave me wonderful product, a great logo, and new website and now we are moving ahead with a digital marketing plan with them. Their design and development services are much better than we had anticipated.",
     stars: 5,
-    image: "/avatar1.png",
+       image: "/images/team/avatar.svg",
+
   },
   {
     name: "Ashish Sharma",
     review:
       "I'm truly grateful for the opportunity to start my professional journey with Devnexus Solutions Pvt. Ltd. The company values innovation and teamwork helped me build confidence and develop my skills. Looking forward to learning more and contributing further.",
     stars: 5,
-    image: "/avatar2.png",
+       image: "/images/team/avatar.svg",
+
   },
   {
     name: "Ankit",
@@ -23,28 +25,31 @@ const testimonials = [
       "I'm truly grateful for the opportunity to start my professional journey with Devnexus Solutions Pvt. Ltd. The company values innovation and teamwork helped me build confidence and develop my skills. Looking forward to learning more and contributing further.",
 
     stars: 5,
-    image: "/avatar3.png",
+     image: "/images/team/avatar.svg",
+
   },
   {
     name: "Saddam Hossain",
     review:
       "Working for DevNexus solutions for a long time. Work culture is great. It was an amazing experience to work with them.",
     stars: 5,
-    image: "/avatar4.png",
+    image: "/images/team/avatar.svg",
+
   },
   {
     name: "Divya Poriya",
     review:
       "One of my friends is working in the company, I truly admire the work culture and flexibility given by the company.",
     stars: 5,
-    image: "/avatar5.png",
+    image: "/images/team/avatar.svg",
+ 
   },
   {
     name: "Mukit Jindal",
     review:
       "Working at Devnexus has been a fantastic journey! The culture here is incredibly positive and motivating—everyone is always ready to help and collaborate. I've had so many opportunities to grow both professionally and personally. The management is approachable, and they genuinely care about the team's well-being and development. It's inspiring to be part of a company that values innovation, hard work, and team spirit. I'm proud to be part of this amazing organization!",
     stars: 5,
-    image: "/avatar6.png",
+    image: "/images/team/avatar.svg",
   },
 ];
 

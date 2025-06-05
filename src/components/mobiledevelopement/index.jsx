@@ -7,6 +7,29 @@ import ExecutionSection from "../common/ExecutionSection";
 import StatusCard from "../common/Status";
 import { ProcessWeFollow } from "../common/ProcessWeFollow";
 import { Banner } from "../global/Banner";
+import Brand3 from '../../../public/images/brandslogo/Jindal.svg';
+import Brand4 from '../../../public/images/brandslogo/Studio.svg';
+import Brand5 from '../../../public/images/brandslogo/Rotunneling.svg';
+import Brand6 from '../../../public/images/brandslogo/travel.svg';
+import Brand7 from '../../../public/images/brandslogo/DCI.svg';
+import Brand10 from '../../../public/images/brandslogo/SRE.svg';
+import Brand11 from '../../../public/images/brandslogo/KG.svg';
+import Brand12 from '../../../public/images/brandslogo/nano.svg';
+import Brand13 from '../../../public/images/brandslogo/cafe.svg';
+import Brand14 from '../../../public/images/brandslogo/vize.svg';
+
+const brandLogos = [
+  Brand3.src,
+  Brand4.src,
+  Brand5.src,
+  Brand6.src,
+  Brand7.src,
+  Brand10.src,
+  Brand11.src,
+  Brand12.src,
+  Brand13.src,
+  Brand14.src,
+];
 
 const faqData = [
   {
@@ -51,7 +74,11 @@ export const MobileDevelopment = () => {
       <StatusCard />
       <WhyChooseUs />
       <ExecutionSection />
-      <Slider />
+        <Slider
+                          title="Driving Growth To The Brands."
+                          subtitle="We deliver Global IT Services to brands of all sizes"
+                          brands={brandLogos}
+                        />
       <ProcessWeFollow />
       <FaqSection
         faqs={faqData}

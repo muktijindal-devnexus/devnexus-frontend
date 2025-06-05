@@ -2,19 +2,18 @@ import Image from "next/image";
 
 // Update this array with actual image paths
 const platforms = [
-  { name: "Etherium", src: "/platforms/ethereum.png" },
-  { name: "Solana", src: "/platforms/solana.png" },
-  { name: "Hyperledger", src: "/platforms/stellar.png" },
-  { name: "Corda", src: "/platforms/hyperledger.png" },
-  { name: "Polkadot", src: "/platforms/credits.png" },
-  { name: "Steller", src: "/platforms/bigchaindb.png" },
-  { name: "Hadera", src: "/platforms/hashgraph.png" },
-  { name: "Tezos", src: "/platforms/ripple.png" },
-  { name: "Algorand", src: "/platforms/corda.png" },
-  { name: "Stellar", src: "/platforms/multichain.png" },
-  { name: "Cardano", src: "/platforms/tron.png" },
-  { name: "Hybrid Chain", src: "/platforms/eos.png" },
-  { name: "Multi-chain", src: "/platforms/eos.png" },
+  { name: "Etherium", src: "/images/Blockchain/Etherium.svg" },
+  { name: "Solana", src: "/images/Blockchain/solana.svg" },
+  { name: "Stellar", src: "/images/Blockchain/stellar.svg" },
+  { name: "Hyperledger", src: "/images/Blockchain/Hyperledger.svg" },
+  { name: "Credits", src: "/images/Blockchain/Credits.svg" },
+  { name: "Bigchaindb", src: "/images/Blockchain/Bigchaindb.svg" },
+  { name: "Hashgraph", src: "/images/Blockchain/Hashgraph.svg" },
+  { name: "Ripple", src: "/images/Blockchain/Ripple.svg" },
+  { name: "Corda", src: "/images/Blockchain/Corda.svg" },
+  { name: "Multichain", src: "/images/Blockchain/Multichain.svg" },
+  { name: "Tron", src:  "/images/Blockchain/Tron.svg" },
+  { name: "EOS", src: "/images/Blockchain/EOS.svg" },
 
 ];
 

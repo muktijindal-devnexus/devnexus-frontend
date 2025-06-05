@@ -1,6 +1,6 @@
 import React from "react";
 import { Banners } from "../global/NavBanners";
-import BannerImage1 from "../../../public/images/blogs/BlogsHeroSection.jpeg";
+import BannerImage1 from "../../../public/images/services/servicesHeroSection.jpg";
 import OurProcess from "./Process";
 import ServicesSection from "./ServicesSection";
 

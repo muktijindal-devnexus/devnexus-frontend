@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { FaBars, FaTimes } from "react-icons/fa";
+import Image from "next/image";
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -22,10 +23,9 @@ export const Navbar = () => {
 
   const servicesDropdown = [
     { name: "Web Development", href: "/web-design-development-services" },
-     { name: "UI UX", href: "/uiux" },
+    { name: "UI UX", href: "/uiux" },
     { name: "Mobile App Development", href: "/mobile-development-services" },
     { name: "Digital Marketing", href: "/digital-marketing-services" },
-    { name: "Mobile Development", href: "/ai-integration" },
     { name: "Blockchain Development", href: "/blockchain-development-services" },
     { name: "AI Technologies", href: "/ai-tech-services" },
   ];
@@ -44,12 +44,12 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <header className="bg-[#333] text-white">
-      <div className="max-w-screen-xl mx-auto flex items-center justify-between px-4 py-3 md:py-4">
+    <header className="fixed top-0 w-full z-50 text-white bg-[rgba(30,30,30,0.72)] backdrop-blur-md border-none">
+      <div className="max-w-screen-xl mx-auto flex items-center justify-between px-4">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <Link href="/" className="flex items-center space-x-4">
-            <img src="/images/logo.png" alt="Logo" className="h-8 w-auto" />
+          <Link href="/" className="flex items-center">
+            <Image src="/images/logo.png" width={60} height={60} alt="Logo" />
             <div>
               <h1 className="text-sm font-bold">DevNexus Solutions</h1>
               <p className="text-xs text-gray-300">INNOVATE • BUILD • GROW</p>
@@ -144,7 +144,7 @@ export const Navbar = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <nav className="md:hidden bg-[#333] text-white px-4 py-4 space-y-3">
+        <nav className="md:hidden bg-[rgba(30,30,30,0.72)] backdrop-blur-md text-white px-4 py-4 space-y-3">
           <Link href="/" className="block hover:text-blue-400">Home</Link>
 
           <div className="space-y-1">

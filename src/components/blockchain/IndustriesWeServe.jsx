@@ -7,11 +7,11 @@ const industries = [
   { label: 'Automotive', icon: '/images/Blockchain/maintenance.svg' },
   { label: 'Logistics', icon: '/images/Blockchain/trolley.svg' },
   { label: 'Real Estate', icon: '/images/Blockchain/construction.svg' },
-  { label: 'Ceramics', icon: '/images/Blockchain/cinema.svg' },
-  { label: 'Telecom', icon: '/images/Blockchain/targeting.svg' },
-  { label: 'Entertainment', icon: '/images/Blockchain/global.svg' },
-  { label: 'Marketing', icon: '/images/Blockchain/marketing.png' },
-  { label: 'Education', icon: '/images/Blockchain/education.png' },
+  { label: 'Manufacturing', icon: '/images/Blockchain/Manufacturing.svg' },
+  { label: 'Telecom', icon: '/images/Blockchain/telecom.svg' },
+  { label: 'Entertainment', icon: '/images/Blockchain/cinema.svg' },
+  { label: 'Marketing', icon: '/images/Blockchain/marketing.svg' },
+  { label: 'Education', icon: '/images/Blockchain/global.svg' },
   { label: 'Travel & Tourism', icon: '/images/Blockchain/travel.svg' },
 ];
 

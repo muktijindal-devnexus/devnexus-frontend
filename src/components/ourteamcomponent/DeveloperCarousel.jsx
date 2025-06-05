@@ -15,16 +15,10 @@ const DeveloperCarousel = ({ developers = [], title = "Our Developers", cardsToS
   };
 
   const getHeading = (filter) => {
-    switch (filter) {
-      case 'HTML5 / CSS3':
-        return `${title} - HTML5 or CSS3`;
-      case 'Tailwind CSS':
-        return `${title} - Tailwind Experts`;
-      case 'Bootstrap':
-        return `${title} - Bootstrap Specialists`;
-      default:
-        return `${title} - ${filter}`;
+    if (filter === 'HTML5 / CSS3') {
+      return title; // Only show base title for this case
     }
+    return `${title} - ${filter}`;
   };
 
   const filtered = developers.filter((dev) => matchSkills(dev.skills, activeFilter));

@@ -24,7 +24,6 @@
     "is-arrayish": "^0.3.2",
     "jiti": "^2.4.2",
     "lightningcss": "^1.29.2",
-    "lightningcss-win32-x64-msvc": "^1.29.2",
     "lucide-react": "^0.510.0",
     "magic-string": "^0.30.17",
     "matter-js": "^0.20.0",

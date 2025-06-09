@@ -2,8 +2,6 @@
 
 import { useState } from "react";
 
-import React from "react";
-
 export const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -61,121 +59,123 @@ export const ContactForm = () => {
   };
 
   return (
-    <section className=" flex justify-center">
+    <section className="flex justify-center px-4 sm:px-6">
       <div
-        className="w-full max-w-6xl px-16 py-8 flex flex-col lg:flex-row gap-35"
+        className="w-full max-w-6xl px-4 sm:px-8 md:px-12 lg:px-16 py-6 md:py-8 flex flex-col lg:flex-row gap-6 md:gap-8 lg:gap-10"
         style={{
           background: "linear-gradient(to right, white, #e9eef4, white)",
         }}
       >
         {/* Heading Section */}
         <div className="lg:w-1/3 flex items-center">
-          <h1 className="text-2xl lg:text-3xl font-semibold text-[#002b5b] leading-snug">
+          <h1 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-[#002b5b] leading-snug">
             Let's Make Your Brand Shine & Competitors Envy!
           </h1>
         </div>
 
         {/* Form Section */}
-        <div className="lg:w-1/2 w-full bg-[#f9f9f9] p-6 rounded-xl">
-          <h2 className="text-xl font-semibold mb-2">Get in Touch</h2>
-          <p className="text-sm text-gray-600 mb-6">
+        <div className="lg:w-1/2 w-full bg-[#f9f9f9] p-4 sm:p-6 rounded-xl">
+          <h2 className="text-lg sm:text-xl font-semibold mb-2">Get in Touch</h2>
+          <p className="text-xs sm:text-sm text-gray-600 mb-4 sm:mb-6">
             Please fill out the form to help us understand the areas where you
             require assistance.
           </p>
 
-          <form onSubmit={handleSubmit} className="space-y-5">
+          <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
             {/* Row 1: Name & Email */}
-            <div className="flex  gap-4">
-              <div className=" border-[#828282] border-1 p-3.5 rounded-2xl w-1/2">
+            <div className="flex flex-col sm:flex-row gap-4">
+              <div className="border-[#828282] border rounded-xl sm:rounded-2xl p-2 sm:p-3.5 w-full sm:w-1/2">
                 <input
                   type="text"
                   name="name"
                   placeholder="Enter your name*"
                   value={formData.name}
                   onChange={handleChange}
-                  className="input-style"
+                  className="w-full outline-none bg-transparent text-sm sm:text-base"
                 />
               </div>
-              <div className="border-[#828282] border-1 p-3.5 rounded-2xl">
+              <div className="border-[#828282] border rounded-xl sm:rounded-2xl p-2 sm:p-3.5 w-full sm:w-1/2">
                 <input
                   type="email"
                   name="email"
                   placeholder="Enter your Email*"
                   value={formData.email}
                   onChange={handleChange}
-                  className="input-style"
+                  className="w-full outline-none bg-transparent text-sm sm:text-base"
                 />
               </div>
             </div>
 
-            {errors.name && (
-              <p className="text-red-500 text-sm">{errors.name}</p>
-            )}
-            {errors.email && (
-              <p className="text-red-500 text-sm">{errors.email}</p>
-            )}
+            <div className="flex flex-col gap-1">
+              {errors.name && (
+                <p className="text-red-500 text-xs sm:text-sm">{errors.name}</p>
+              )}
+              {errors.email && (
+                <p className="text-red-500 text-xs sm:text-sm">{errors.email}</p>
+              )}
+            </div>
 
             {/* Row 2: Country Code, Phone, Website */}
-            {/* Row 2: Country Code, Phone, Website */}
-            <div className="flex flex-col md:flex-row gap-4">
-              <div className="border-[#828282] border rounded-xl w-20 flex items-center justify-center bg-gray-100 text-sm font-medium p-1.5 text-center">
+            <div className="flex flex-col sm:flex-row gap-4">
+              <div className="border-[#828282] border rounded-xl w-20 flex items-center justify-center bg-gray-100 text-xs sm:text-sm font-medium p-1 sm:p-1.5 text-center">
                 IN +91
               </div>
-              <div className="border-[#828282] border rounded-xl w-full md:w-1/3 p-1.5 text-center">
+              <div className="border-[#828282] border rounded-xl w-full sm:w-1/3 p-1 sm:p-1.5">
                 <input
                   type="tel"
                   name="phone"
                   placeholder="Mobile number*"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full text-center text-[16px] py-2 rounded-md outline-none"
+                  className="w-full text-center text-sm sm:text-[16px] py-1 sm:py-2 rounded-md outline-none"
                 />
               </div>
-              <div className="border-[#828282] border rounded-xl flex-grow text-center p-1.5">
+              <div className="border-[#828282] border rounded-xl flex-grow p-1 sm:p-1.5">
                 <input
                   type="url"
                   name="website"
                   placeholder="Website URL"
                   value={formData.website}
                   onChange={handleChange}
-                  className="w-full text-center text-[16px] px-2 py-2 rounded-md outline-none"
+                  className="w-full text-center text-sm sm:text-[16px] px-2 py-1 sm:py-2 rounded-md outline-none"
                 />
               </div>
             </div>
 
             {errors.phone && (
-              <p className="text-red-500 text-sm">{errors.phone}</p>
+              <p className="text-red-500 text-xs sm:text-sm">{errors.phone}</p>
             )}
 
             {/* Row 3: Looking For */}
-            <div className=" border-[#828282] border-1 rounded-xl w-1/2 text-center p-1.5">
+            <div className="border-[#828282] border rounded-xl w-full sm:w-1/2 p-1 sm:p-1.5">
               <input
                 type="text"
                 name="lookingFor"
                 placeholder="Looking for*"
                 value={formData.lookingFor}
                 onChange={handleChange}
-                className=" text-center text-[16px] px-2 py-2 rounded-md"
+                className="w-full text-center text-sm sm:text-[16px] px-2 py-1 sm:py-2 rounded-md outline-none"
               />
             </div>
             {errors.lookingFor && (
-              <p className="text-red-500 text-sm">{errors.lookingFor}</p>
+              <p className="text-red-500 text-xs sm:text-sm">{errors.lookingFor}</p>
             )}
 
             {/* Row 4: Message */}
-            <div className=" border-[#828282] border-1 rounded-xl">
+            <div className="border-[#828282] border rounded-xl p-1 sm:p-1.5">
               <textarea
                 name="message"
                 placeholder="Enter Your Message"
                 value={formData.message}
                 onChange={handleChange}
-                className=" text-center text-sm px-2 py-2 rounded-md"
+                className="w-full text-center text-xs sm:text-sm px-2 py-1 sm:py-2 rounded-md outline-none min-h-[80px]"
+                rows="3"
               ></textarea>
             </div>
 
             <button
               type="submit"
-              className="bg-[#002b5b] hover:bg-[#003d82] text-white py-3 px-6 rounded-md font-medium"
+              className="bg-[#002b5b] hover:bg-[#003d82] text-white py-2 sm:py-3 px-4 sm:px-6 rounded-md font-medium text-sm sm:text-base w-full sm:w-auto"
             >
               Submit
             </button>

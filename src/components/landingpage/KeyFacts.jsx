@@ -29,7 +29,7 @@ export const KeyFacts = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 justify-items-center gap-8 sm:grid-cols-2 lg:grid-cols-3 w-full max-w-6xl px-4 pt-16">
+      <div className="grid grid-cols-1 justify-items-center items-center gap-8 sm:grid-cols-2 lg:grid-cols-3 w-full max-w-6xl px-4 pt-16">
         {/* Column 1 */}
         <div className="space-y-8">
           <div className="text-center">
@@ -52,8 +52,9 @@ export const KeyFacts = () => {
         </div>
 
         {/* Column 2 - Image with Arrows */}
-        <div className="relative flex items-center justify-center">
-          <div className="absolute -top-5 -left-[70%]">
+        <div className="relative flex items-center justify-center ">
+          <div className="hidden sm:block" >
+       <div className="absolute -top-5 -left-[70%] ">
             <Image src={TopArrow} alt="Arrow" width={128} height={128} />
           </div>
           <div className="absolute top-[50%] -left-[70%]">
@@ -65,6 +66,8 @@ export const KeyFacts = () => {
           <div className="absolute top-[50%] -right-[70%]">
             <Image src={RightBottom} alt="Arrow" width={128} height={128} />
           </div>
+          </div>
+   
 
           <Image
             src={Innovation}

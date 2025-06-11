@@ -15,7 +15,7 @@ import Brand7 from '../../../public/images/brandslogo/DCI.svg';
 import Brand10 from '../../../public/images/brandslogo/SRE.svg';
 import Brand11 from '../../../public/images/brandslogo/KG.svg';
 import Brand12 from '../../../public/images/brandslogo/nano.svg';
-import Brand13 from 'https://www.pixelstalk.net/wp-content/uploads/2016/07/Free-Amazing-Background-Images-Nature.jpg';
+// import Brand13 from 'https://www.pixelstalk.net/wp-content/uploads/2016/07/Free-Amazing-Background-Images-Nature.jpg';
 import Brand14 from '../../../public/images/brandslogo/vize.svg';
 
 const faqData = [
@@ -59,7 +59,7 @@ const brandLogos = [
   Brand10.src,
   Brand11.src,
   Brand12.src,
-  Brand13.src,
+  // Brand13.src,
   Brand14.src,
 ];
 

@@ -12,7 +12,7 @@ import Brand7 from '../../../public/images/brandslogo/DCI.svg';
 import Brand10 from '../../../public/images/brandslogo/SRE.svg';
 import Brand11 from '../../../public/images/brandslogo/KG.svg';
 import Brand12 from '../../../public/images/brandslogo/nano.svg';
-import Brand13 from '../../../public/images/brandslogo/cafe.svg';
+import Brand13 from 'https://www.pixelstalk.net/wp-content/uploads/2016/07/Free-Amazing-Background-Images-Nature.jpg';
 import Brand14 from '../../../public/images/brandslogo/vize.svg';
 
 import StatusCard from "../common/Status";

@@ -5,7 +5,7 @@ import DigitalMarketing from "../../../public/images/Services/DigitalMarketing.j
 import FullStackDev from "../../../public/images/Services/Web.jpeg";
 import UIUX from "../../../public/images/Services/WebDesign.jpeg";
 import MobileDev from "../../../public/images/Services/Mobile.jpeg";
-import Blockchain from "https://www.pixelstalk.net/wp-content/uploads/2016/07/Free-Amazing-Background-Images-Nature.jpg";
+// import Blockchain from "https://www.pixelstalk.net/wp-content/uploads/2016/07/Free-Amazing-Background-Images-Nature.jpg";
 import AITech from "../../../public/images/Services/ai.jpeg";
 import BannerSheet from "../../../public/images/ServiceBannerSheet.png";
 import { MoveRight } from "lucide-react";
@@ -16,7 +16,7 @@ const services = [
   { title: "Full-Stack Development", href: "/web-design-development-services", image: FullStackDev },
   { title: "UI/UX Designing", href: "/uiux", image: UIUX },
   { title: "Mobile Development", href: "/mobile-development-services", image: MobileDev },
-  { title: "Blockchain Development", href: "/blockchain-development-services", image: Blockchain },
+  // { title: "Blockchain Development", href: "/blockchain-development-services", image: Blockchain },
   { title: "AI Technologies", href: "/ai-tech-services", image: AITech },
 ];
 

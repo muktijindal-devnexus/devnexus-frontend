@@ -5,7 +5,7 @@ import DigitalMarketing from "../../../public/images/Services/DigitalMarketing.j
 import FullStackDev from "../../../public/images/Services/Web.jpeg";
 import UIUX from "../../../public/images/Services/WebDesign.jpeg";
 import MobileDev from "../../../public/images/Services/Mobile.jpeg";
-import Blockchain from "../../../public/images/Services/Blockchain.jpeg";
+import Blockchain from "https://www.pixelstalk.net/wp-content/uploads/2016/07/Free-Amazing-Background-Images-Nature.jpg";
 import AITech from "../../../public/images/Services/ai.jpeg";
 import BannerSheet from "../../../public/images/ServiceBannerSheet.png";
 import { MoveRight } from "lucide-react";

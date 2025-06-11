@@ -37,10 +37,15 @@ export default function AboutUs() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <Image
+           <Image
             src={Workspace}
             alt="Workspace"
-            className="w-full h-[275px] object-cover"
+            className="w-full bg-transparent 
+            h-[300px] sm:h-[400px] md:h-[380px] lg:h-[460px]"
+            sizes="(max-width: 640px) 100vw, 
+         (max-width: 768px) 100vw, 
+         (max-width: 1024px) 100vw, 
+         100vw"
           />
             {/* Features Grid */}
           <div className="grid grid-cols-2 gap-4 bg-[#F5FBFF] mt-5 p-4">
